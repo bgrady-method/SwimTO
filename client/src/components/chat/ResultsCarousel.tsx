@@ -1,4 +1,4 @@
-import { MapPin, Ruler, Rows3, Waves } from 'lucide-react';
+import { MapPin, Rows3, Waves } from 'lucide-react';
 import { useMapStore } from '@/stores/useMapStore';
 import { formatDistance } from '@/lib/geo-utils';
 import { cn } from '@/lib/utils';
@@ -23,6 +23,7 @@ function getPoolGradient(poolType?: string, poolId?: number): string {
 export function ResultsCarousel({ pools }: ResultsCarouselProps) {
   const flyTo = useMapStore((s) => s.flyTo);
   const setSelectedPool = useMapStore((s) => s.setSelectedPool);
+  const setRequestMapView = useMapStore((s) => s.setRequestMapView);
 
   return (
     <div className="flex gap-2.5 overflow-x-auto pb-2 -mx-1 px-1">
@@ -32,6 +33,7 @@ export function ResultsCarousel({ pools }: ResultsCarouselProps) {
           onClick={() => {
             flyTo(pool.lat, pool.lng, 15);
             setSelectedPool(pool.poolId);
+            setRequestMapView(true);
           }}
           className="group flex flex-col w-[200px] shrink-0 rounded-xl bg-background border border-border overflow-hidden hover:border-sky-300 hover:shadow-md transition-all text-left"
         >
