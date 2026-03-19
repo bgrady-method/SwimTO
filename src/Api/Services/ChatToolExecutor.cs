@@ -32,8 +32,8 @@ public class ChatToolExecutor(PoolSearchService searchService, IServiceProvider 
             Attributes = new AttributeFilter { PoolType = input.PoolType },
         };
 
-        var results = await searchService.SearchAsync(request);
-        var top = results.Take(10).Select(r => new
+        var response = await searchService.SearchAsync(request);
+        var top = response.Results.Take(10).Select(r => new
         {
             r.PoolId,
             r.Name,

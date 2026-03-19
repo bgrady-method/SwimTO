@@ -1,14 +1,14 @@
 import axios from 'axios';
 import type { PoolSearchRequest } from '@/types/filters';
-import type { PoolSearchResult } from '@/types/pool';
+import type { PoolSearchResponse } from '@/types/pool';
 
 const api = axios.create({
   baseURL: '/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
-export async function searchPools(request: PoolSearchRequest): Promise<PoolSearchResult[]> {
-  const { data } = await api.post<PoolSearchResult[]>('/pools/search', request);
+export async function searchPools(request: PoolSearchRequest): Promise<PoolSearchResponse> {
+  const { data } = await api.post<PoolSearchResponse>('/pools/search', request);
   return data;
 }
 

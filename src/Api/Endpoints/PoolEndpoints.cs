@@ -13,8 +13,8 @@ public static class PoolEndpoints
 
         group.MapPost("/search", async (PoolSearchRequest request, PoolSearchService searchService) =>
         {
-            var results = await searchService.SearchAsync(request);
-            return Results.Ok(results);
+            var response = await searchService.SearchAsync(request);
+            return Results.Ok(response);
         });
 
         group.MapGet("/{id:int}", async (int id, AppDbContext db) =>

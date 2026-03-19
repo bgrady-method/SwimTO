@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Input } from '@/components/ui/input';
 import { useFilterStore } from '@/stores/useFilterStore';
+import { usePoolSearch } from '@/hooks/usePoolSearch';
 import { geocodeAddress, getSwimTypes } from '@/lib/api';
 import { cn } from '@/lib/utils';
 import { SWIM_TYPES, DAY_NAMES } from '@/types/pool';
@@ -14,6 +15,8 @@ export function FilterPanel() {
     swimTypes, daysOfWeek, timeFrom, timeTo, location, attributes,
     toggleSwimType, toggleDay, setTimeRange, setLocation, setAttributes, resetFilters,
   } = useFilterStore();
+
+  const { facets } = usePoolSearch();
 
   const [locationInput, setLocationInput] = useState('');
   const [sections, setSections] = useState({ swimType: true, time: true, location: true, pool: false });
@@ -48,20 +51,28 @@ export function FilterPanel() {
       {/* Swim Type */}
       <CollapsibleSection title="Swim Type" open={sections.swimType} onToggle={() => toggleSection('swimType')}>
         <div className="flex flex-wrap gap-1.5">
-          {swimTypeOptions.map((type) => (
-            <button
-              key={type}
-              onClick={() => toggleSwimType(type)}
-              className={cn(
-                'text-xs px-3 py-2 min-h-[36px] rounded-full border transition-colors active:opacity-80',
-                swimTypes.includes(type)
-                  ? 'bg-sky-500 text-white border-sky-500'
-                  : 'bg-background border-border text-muted-foreground hover:border-sky-300'
-              )}
-            >
-              {type}
-            </button>
-          ))}
+          {swimTypeOptions.map((type) => {
+            const count = facets?.swimTypes[type];
+            const isZero = count === 0;
+            return (
+              <button
+                key={type}
+                onClick={() => toggleSwimType(type)}
+                className={cn(
+                  'text-xs px-3 py-2 min-h-[36px] rounded-full border transition-colors active:opacity-80',
+                  swimTypes.includes(type)
+                    ? 'bg-sky-500 text-white border-sky-500'
+                    : 'bg-background border-border text-muted-foreground hover:border-sky-300',
+                  isZero && !swimTypes.includes(type) && 'opacity-40'
+                )}
+              >
+                {type}
+                {count != null && (
+                  <span className="ml-1.5 opacity-75">({count})</span>
+                )}
+              </button>
+            );
+          })}
         </div>
       </CollapsibleSection>
 
@@ -69,20 +80,28 @@ export function FilterPanel() {
       <CollapsibleSection title="Day & Time" open={sections.time} onToggle={() => toggleSection('time')}>
         <div className="space-y-3">
           <div className="flex gap-1">
-            {DAY_NAMES.map((day, i) => (
-              <button
-                key={day}
-                onClick={() => toggleDay(i)}
-                className={cn(
-                  'flex-1 text-xs py-2.5 min-h-[44px] rounded border transition-colors font-medium active:opacity-80',
-                  daysOfWeek.includes(i)
-                    ? 'bg-sky-500 text-white border-sky-500'
-                    : 'bg-background border-border text-muted-foreground hover:border-sky-300'
-                )}
-              >
-                {day}
-              </button>
-            ))}
+            {DAY_NAMES.map((day, i) => {
+              const count = facets?.daysOfWeek[i];
+              const isZero = count === 0;
+              return (
+                <button
+                  key={day}
+                  onClick={() => toggleDay(i)}
+                  className={cn(
+                    'flex-1 flex flex-col items-center justify-center text-xs py-1.5 min-h-[44px] rounded border transition-colors font-medium active:opacity-80',
+                    daysOfWeek.includes(i)
+                      ? 'bg-sky-500 text-white border-sky-500'
+                      : 'bg-background border-border text-muted-foreground hover:border-sky-300',
+                    isZero && !daysOfWeek.includes(i) && 'opacity-40'
+                  )}
+                >
+                  <span>{day}</span>
+                  {count != null && (
+                    <span className="text-[10px] opacity-75 leading-tight">{count}</span>
+                  )}
+                </button>
+              );
+            })}
           </div>
           <div className="flex items-center gap-2">
             <Input
@@ -140,20 +159,28 @@ export function FilterPanel() {
       <CollapsibleSection title="Pool Attributes" open={sections.pool} onToggle={() => toggleSection('pool')}>
         <div className="space-y-3">
           <div className="flex gap-1.5">
-            {['Indoor', 'Outdoor'].map((type) => (
-              <button
-                key={type}
-                onClick={() => setAttributes({ poolType: attributes.poolType === type ? null : type })}
-                className={cn(
-                  'flex-1 text-xs py-2.5 min-h-[44px] rounded border transition-colors font-medium active:opacity-80',
-                  attributes.poolType === type
-                    ? 'bg-sky-500 text-white border-sky-500'
-                    : 'bg-background border-border text-muted-foreground hover:border-sky-300'
-                )}
-              >
-                {type}
-              </button>
-            ))}
+            {['Indoor', 'Outdoor'].map((type) => {
+              const count = facets?.poolTypes[type];
+              const isZero = count === 0;
+              return (
+                <button
+                  key={type}
+                  onClick={() => setAttributes({ poolType: attributes.poolType === type ? null : type })}
+                  className={cn(
+                    'flex-1 text-xs py-2.5 min-h-[44px] rounded border transition-colors font-medium active:opacity-80',
+                    attributes.poolType === type
+                      ? 'bg-sky-500 text-white border-sky-500'
+                      : 'bg-background border-border text-muted-foreground hover:border-sky-300',
+                    isZero && attributes.poolType !== type && 'opacity-40'
+                  )}
+                >
+                  {type}
+                  {count != null && (
+                    <span className="ml-1.5 opacity-75">({count})</span>
+                  )}
+                </button>
+              );
+            })}
           </div>
           <div className="space-y-1">
             <div className="flex justify-between text-xs text-muted-foreground">

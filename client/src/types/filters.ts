@@ -27,4 +27,5 @@ export interface PoolSearchRequest {
   location?: LocationFilter;
   attributes?: AttributeFilter;
   ranking?: RankingWeights;
+  includeFacets?: boolean;
 }

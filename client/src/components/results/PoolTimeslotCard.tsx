@@ -1,4 +1,4 @@
-import { MapPin, Ruler, Rows3, Accessibility, Droplets, Clock } from 'lucide-react';
+import { MapPin, Ruler, Rows3, Accessibility, Droplets, Clock, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { MatchScoreBar } from './MatchScoreBar';
@@ -116,6 +116,20 @@ export function PoolTimeslotCard({ result, compact }: PoolTimeslotCardProps) {
           {result.matchingSchedules.length} sessions
         </span>
       </div>
+
+      {/* Website link */}
+      {result.website && (
+        <a
+          href={result.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="flex items-center gap-1 text-xs text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 mb-2"
+        >
+          <ExternalLink className="h-3 w-3" />
+          Official website
+        </a>
+      )}
 
       {/* Score bar */}
       <MatchScoreBar score={result.compositeScore} />

@@ -11,18 +11,16 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
     private const double DefaultLng = -79.3832;
     private const double DefaultRadiusKm = 10.0;
 
-    public async Task<List<PoolSearchResult>> SearchAsync(PoolSearchRequest request)
+    public async Task<PoolSearchResponse> SearchAsync(PoolSearchRequest request)
     {
         var lat = request.Location?.Lat ?? DefaultLat;
         var lng = request.Location?.Lng ?? DefaultLng;
         var radiusKm = request.Location?.RadiusKm ?? DefaultRadiusKm;
         var weights = request.Ranking ?? new RankingWeights();
 
+        // Load pools without PoolType filter in EF — we need both types for facet counts
         var query = db.Pools.Include(p => p.Schedules).Where(p => p.IsActive).AsQueryable();
 
-        // Attribute filters
-        if (request.Attributes?.PoolType is not null)
-            query = query.Where(p => p.PoolType == request.Attributes.PoolType);
         if (request.Attributes?.MinLength is > 0)
             query = query.Where(p => p.LengthMeters >= request.Attributes.MinLength);
         if (request.Attributes?.MinLanes is > 0)
@@ -30,35 +28,31 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
 
         var pools = await query.ToListAsync();
 
-        var results = new List<PoolSearchResult>();
-
+        // Build pool+distance list (filter by radius only)
+        var poolsWithDistance = new List<(Models.Pool Pool, double Distance)>();
         foreach (var pool in pools)
         {
             var distance = GeoUtils.HaversineDistance(lat, lng, pool.Latitude, pool.Longitude);
             if (distance > radiusKm) continue;
+            poolsWithDistance.Add((pool, distance));
+        }
 
-            // Filter schedules
-            var matchingSchedules = pool.Schedules.AsEnumerable();
+        // Compute facets if requested
+        FacetCounts? facets = null;
+        if (request.IncludeFacets)
+            facets = ComputeFacets(poolsWithDistance, request);
 
-            if (request.SwimTypes is { Length: > 0 })
-                matchingSchedules = matchingSchedules.Where(s => request.SwimTypes.Contains(s.SwimType));
+        // Now apply all filters (including PoolType) for the actual results
+        var results = new List<PoolSearchResult>();
 
-            if (request.DaysOfWeek is { Length: > 0 })
-                matchingSchedules = matchingSchedules.Where(s => request.DaysOfWeek.Contains(s.DayOfWeek));
+        foreach (var (pool, distance) in poolsWithDistance)
+        {
+            // Apply PoolType filter in-memory
+            if (request.Attributes?.PoolType is not null && pool.PoolType != request.Attributes.PoolType)
+                continue;
 
-            if (request.TimeFrom.HasValue)
-                matchingSchedules = matchingSchedules.Where(s => s.StartTime >= request.TimeFrom.Value || s.EndTime >= request.TimeFrom.Value);
-
-            if (request.TimeTo.HasValue)
-                matchingSchedules = matchingSchedules.Where(s => s.StartTime <= request.TimeTo.Value);
-
-            if (request.DateFrom.HasValue)
-                matchingSchedules = matchingSchedules.Where(s => s.EffectiveTo == null || s.EffectiveTo >= request.DateFrom.Value);
-
-            if (request.DateTo.HasValue)
-                matchingSchedules = matchingSchedules.Where(s => s.EffectiveFrom <= request.DateTo.Value);
-
-            var scheduleList = matchingSchedules.ToList();
+            var scheduleList = FilterSchedules(pool.Schedules, request.SwimTypes, request.DaysOfWeek,
+                request.TimeFrom, request.TimeTo, request.DateFrom, request.DateTo);
 
             // If swim type or day filters are set, only include pools with matching schedules
             if ((request.SwimTypes is { Length: > 0 } || request.DaysOfWeek is { Length: > 0 }) && scheduleList.Count == 0)
@@ -95,6 +89,111 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
             });
         }
 
-        return results.OrderByDescending(r => r.CompositeScore).ToList();
+        return new PoolSearchResponse
+        {
+            Results = results.OrderByDescending(r => r.CompositeScore).ToList(),
+            Facets = facets,
+        };
+    }
+
+    private static List<Models.Schedule> FilterSchedules(
+        IEnumerable<Models.Schedule> schedules,
+        string[]? swimTypes, int[]? daysOfWeek,
+        TimeOnly? timeFrom, TimeOnly? timeTo,
+        DateOnly? dateFrom, DateOnly? dateTo)
+    {
+        var filtered = schedules.AsEnumerable();
+
+        if (swimTypes is { Length: > 0 })
+            filtered = filtered.Where(s => swimTypes.Contains(s.SwimType));
+
+        if (daysOfWeek is { Length: > 0 })
+            filtered = filtered.Where(s => daysOfWeek.Contains(s.DayOfWeek));
+
+        if (timeFrom.HasValue)
+            filtered = filtered.Where(s => s.StartTime >= timeFrom.Value || s.EndTime >= timeFrom.Value);
+
+        if (timeTo.HasValue)
+            filtered = filtered.Where(s => s.StartTime <= timeTo.Value);
+
+        if (dateFrom.HasValue)
+            filtered = filtered.Where(s => s.EffectiveTo == null || s.EffectiveTo >= dateFrom.Value);
+
+        if (dateTo.HasValue)
+            filtered = filtered.Where(s => s.EffectiveFrom <= dateTo.Value);
+
+        return filtered.ToList();
+    }
+
+    private static FacetCounts ComputeFacets(
+        List<(Models.Pool Pool, double Distance)> poolsWithDistance,
+        PoolSearchRequest request)
+    {
+        var facets = new FacetCounts();
+
+        // Collect all distinct swim types across all pools
+        var allSwimTypes = poolsWithDistance
+            .SelectMany(p => p.Pool.Schedules.Select(s => s.SwimType))
+            .Distinct();
+
+        // Swim type facets: count pools matching all filters EXCEPT swimTypes
+        foreach (var swimType in allSwimTypes)
+        {
+            var count = 0;
+            foreach (var (pool, _) in poolsWithDistance)
+            {
+                if (request.Attributes?.PoolType is not null && pool.PoolType != request.Attributes.PoolType)
+                    continue;
+
+                // Apply all schedule filters except swimTypes, then check if this swimType exists
+                var schedules = FilterSchedules(pool.Schedules, null, request.DaysOfWeek,
+                    request.TimeFrom, request.TimeTo, request.DateFrom, request.DateTo);
+
+                if (schedules.Any(s => s.SwimType == swimType))
+                    count++;
+            }
+            facets.SwimTypes[swimType] = count;
+        }
+
+        // Day facets: count pools matching all filters EXCEPT daysOfWeek
+        for (var day = 0; day < 7; day++)
+        {
+            var count = 0;
+            foreach (var (pool, _) in poolsWithDistance)
+            {
+                if (request.Attributes?.PoolType is not null && pool.PoolType != request.Attributes.PoolType)
+                    continue;
+
+                var schedules = FilterSchedules(pool.Schedules, request.SwimTypes, null,
+                    request.TimeFrom, request.TimeTo, request.DateFrom, request.DateTo);
+
+                if (schedules.Any(s => s.DayOfWeek == day))
+                    count++;
+            }
+            facets.DaysOfWeek[day] = count;
+        }
+
+        // Pool type facets: count pools matching all filters EXCEPT poolType
+        foreach (var poolType in new[] { "Indoor", "Outdoor" })
+        {
+            var count = 0;
+            foreach (var (pool, _) in poolsWithDistance)
+            {
+                if (pool.PoolType != poolType)
+                    continue;
+
+                var schedules = FilterSchedules(pool.Schedules, request.SwimTypes, request.DaysOfWeek,
+                    request.TimeFrom, request.TimeTo, request.DateFrom, request.DateTo);
+
+                // Pool must have matching schedules if schedule filters are active
+                if ((request.SwimTypes is { Length: > 0 } || request.DaysOfWeek is { Length: > 0 }) && schedules.Count == 0)
+                    continue;
+
+                count++;
+            }
+            facets.PoolTypes[poolType] = count;
+        }
+
+        return facets;
     }
 }

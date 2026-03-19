@@ -34,6 +34,17 @@ export interface PoolSearchResult extends Pool {
   matchingSchedules: ScheduleResult[];
 }
 
+export interface FacetCounts {
+  swimTypes: Record<string, number>;
+  daysOfWeek: Record<number, number>;
+  poolTypes: Record<string, number>;
+}
+
+export interface PoolSearchResponse {
+  results: PoolSearchResult[];
+  facets: FacetCounts | null;
+}
+
 export const SWIM_TYPES = [
   'Lane Swim',
   'Leisure Swim',

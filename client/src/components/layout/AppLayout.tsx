@@ -16,8 +16,8 @@ export function AppLayout() {
   const [mobileTab, setMobileTab] = useState<MobileTab>('chat');
 
   useUserLocation();
-  const { data: searchResults, isLoading } = usePoolSearch();
-  const rankedResults = useRankedResults(searchResults);
+  const { results, isLoading } = usePoolSearch();
+  const rankedResults = useRankedResults(results);
   const highlightedPools = useMapStore((s) => s.highlightedPools);
   const requestMapView = useMapStore((s) => s.requestMapView);
 

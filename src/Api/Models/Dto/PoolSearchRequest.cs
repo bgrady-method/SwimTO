@@ -11,6 +11,7 @@ public class PoolSearchRequest
     public LocationFilter? Location { get; set; }
     public AttributeFilter? Attributes { get; set; }
     public RankingWeights? Ranking { get; set; }
+    public bool IncludeFacets { get; set; }
 }
 
 public class LocationFilter

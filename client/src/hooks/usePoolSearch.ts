@@ -20,11 +20,18 @@ export function usePoolSearch() {
       minLanes: attributes.minLanes,
     },
     ranking: weights,
+    includeFacets: true,
   };
 
-  return useQuery({
+  const query = useQuery({
     queryKey: ['poolSearch', request],
     queryFn: () => searchPools(request),
     staleTime: 30_000,
   });
+
+  return {
+    ...query,
+    results: query.data?.results ?? [],
+    facets: query.data?.facets ?? null,
+  };
 }
