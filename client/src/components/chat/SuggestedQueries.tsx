@@ -18,7 +18,7 @@ export function SuggestedQueries({ onSelect }: SuggestedQueriesProps) {
         <button
           key={query}
           onClick={() => onSelect(query)}
-          className="text-sm px-3 py-1.5 rounded-full border border-sky-200 bg-sky-50 text-sky-700 hover:bg-sky-100 hover:border-sky-300 transition-colors dark:bg-sky-950 dark:border-sky-800 dark:text-sky-300 dark:hover:bg-sky-900"
+          className="text-sm px-4 py-2.5 min-h-[44px] rounded-full border border-sky-200 bg-sky-50 text-sky-700 hover:bg-sky-100 hover:border-sky-300 active:bg-sky-200 transition-colors dark:bg-sky-950 dark:border-sky-800 dark:text-sky-300 dark:hover:bg-sky-900 dark:active:bg-sky-800"
         >
           {query}
         </button>

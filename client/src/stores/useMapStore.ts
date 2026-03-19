@@ -9,6 +9,7 @@ interface MapState {
   hoveredPoolId: number | null;
   highlightedPools: PoolReference[];
   userLocation: [number, number] | null;
+  requestMapView: boolean;
   setCenter: (center: [number, number]) => void;
   setZoom: (zoom: number) => void;
   setSelectedPool: (id: number | null) => void;
@@ -16,6 +17,7 @@ interface MapState {
   setHighlightedPools: (pools: PoolReference[]) => void;
   setUserLocation: (loc: [number, number] | null) => void;
   flyTo: (lat: number, lng: number, zoom?: number) => void;
+  setRequestMapView: (v: boolean) => void;
 }
 
 export const useMapStore = create<MapState>((set) => ({
@@ -25,6 +27,7 @@ export const useMapStore = create<MapState>((set) => ({
   hoveredPoolId: null,
   highlightedPools: [],
   userLocation: null,
+  requestMapView: false,
   setCenter: (center) => set({ center }),
   setZoom: (zoom) => set({ zoom }),
   setSelectedPool: (id) => set({ selectedPoolId: id }),
@@ -32,4 +35,5 @@ export const useMapStore = create<MapState>((set) => ({
   setHighlightedPools: (pools) => set({ highlightedPools: pools }),
   setUserLocation: (loc) => set({ userLocation: loc }),
   flyTo: (lat, lng, zoom) => set({ center: [lat, lng], zoom: zoom ?? 14 }),
+  setRequestMapView: (v) => set({ requestMapView: v }),
 }));

@@ -41,7 +41,7 @@ export function WeightingPanel() {
             size="sm"
             variant={activePreset === preset ? 'default' : 'outline'}
             onClick={() => applyPreset(preset)}
-            className={cn('h-7 text-xs', activePreset === preset && 'bg-sky-500 hover:bg-sky-600')}
+            className={cn('h-9 text-xs', activePreset === preset && 'bg-sky-500 hover:bg-sky-600')}
           >
             {PRESET_LABELS[preset]}
           </Button>

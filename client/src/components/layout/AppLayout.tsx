@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { TopNav } from './TopNav';
 import { LeftPanel } from './LeftPanel';
 import { BottomTabBar } from './BottomTabBar';
@@ -19,9 +19,18 @@ export function AppLayout() {
   const { data: searchResults, isLoading } = usePoolSearch();
   const rankedResults = useRankedResults(searchResults);
   const highlightedPools = useMapStore((s) => s.highlightedPools);
+  const requestMapView = useMapStore((s) => s.requestMapView);
+
+  // Auto-switch to map tab on mobile when a pool card is clicked
+  useEffect(() => {
+    if (requestMapView) {
+      setMobileTab('map');
+      useMapStore.getState().setRequestMapView(false);
+    }
+  }, [requestMapView]);
 
   return (
-    <div className="h-screen flex flex-col bg-background overflow-hidden">
+    <div className="h-dvh flex flex-col bg-background overflow-hidden">
       {/* Desktop nav */}
       <div className="hidden lg:block">
         <TopNav

@@ -53,7 +53,7 @@ export function FilterPanel() {
               key={type}
               onClick={() => toggleSwimType(type)}
               className={cn(
-                'text-xs px-2.5 py-1 rounded-full border transition-colors',
+                'text-xs px-3 py-2 min-h-[36px] rounded-full border transition-colors active:opacity-80',
                 swimTypes.includes(type)
                   ? 'bg-sky-500 text-white border-sky-500'
                   : 'bg-background border-border text-muted-foreground hover:border-sky-300'
@@ -74,7 +74,7 @@ export function FilterPanel() {
                 key={day}
                 onClick={() => toggleDay(i)}
                 className={cn(
-                  'flex-1 text-xs py-1.5 rounded border transition-colors font-medium',
+                  'flex-1 text-xs py-2.5 min-h-[44px] rounded border transition-colors font-medium active:opacity-80',
                   daysOfWeek.includes(i)
                     ? 'bg-sky-500 text-white border-sky-500'
                     : 'bg-background border-border text-muted-foreground hover:border-sky-300'
@@ -89,14 +89,14 @@ export function FilterPanel() {
               type="time"
               value={timeFrom}
               onChange={(e) => setTimeRange(e.target.value, timeTo)}
-              className="h-8 text-xs"
+              className="h-9 text-base lg:text-xs"
             />
             <span className="text-xs text-muted-foreground">to</span>
             <Input
               type="time"
               value={timeTo}
               onChange={(e) => setTimeRange(timeFrom, e.target.value)}
-              className="h-8 text-xs"
+              className="h-9 text-base lg:text-xs"
             />
           </div>
         </div>
@@ -111,9 +111,9 @@ export function FilterPanel() {
               value={locationInput}
               onChange={(e) => setLocationInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleGeocode()}
-              className="h-8 text-xs"
+              className="h-9 text-base lg:text-xs"
             />
-            <Button size="sm" onClick={handleGeocode} className="h-8 text-xs shrink-0">Go</Button>
+            <Button size="sm" onClick={handleGeocode} className="h-9 text-xs shrink-0">Go</Button>
           </div>
           <div className="space-y-1">
             <div className="flex justify-between text-xs text-muted-foreground">
@@ -145,7 +145,7 @@ export function FilterPanel() {
                 key={type}
                 onClick={() => setAttributes({ poolType: attributes.poolType === type ? null : type })}
                 className={cn(
-                  'flex-1 text-xs py-1.5 rounded border transition-colors font-medium',
+                  'flex-1 text-xs py-2.5 min-h-[44px] rounded border transition-colors font-medium active:opacity-80',
                   attributes.poolType === type
                     ? 'bg-sky-500 text-white border-sky-500'
                     : 'bg-background border-border text-muted-foreground hover:border-sky-300'
@@ -182,7 +182,7 @@ function CollapsibleSection({ title, open, onToggle, children }: {
     <div className="border border-border rounded-lg overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-3 py-2 text-xs font-medium text-foreground hover:bg-muted/50 transition-colors"
+        className="w-full flex items-center justify-between px-3 py-3 min-h-[44px] text-sm font-medium text-foreground hover:bg-muted/50 active:bg-muted transition-colors"
       >
         {title}
         <ChevronDown className={cn('h-3.5 w-3.5 transition-transform', open && 'rotate-180')} />

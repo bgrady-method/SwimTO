@@ -43,7 +43,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
           placeholder="Ask about Toronto pools..."
           disabled={disabled}
           rows={1}
-          className="flex-1 resize-none bg-transparent outline-none text-sm placeholder:text-muted-foreground min-h-[36px] py-1.5 px-2"
+          className="flex-1 resize-none bg-transparent outline-none text-base placeholder:text-muted-foreground min-h-[36px] py-1.5 px-2"
         />
         <Button
           size="icon"

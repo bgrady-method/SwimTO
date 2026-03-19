@@ -1,6 +1,6 @@
 export function MapLegend() {
   return (
-    <div className="absolute bottom-4 right-4 z-[1000] bg-background/90 backdrop-blur border border-border rounded-lg p-3 text-xs space-y-1.5 shadow-sm">
+    <div className="absolute bottom-4 left-4 lg:left-auto lg:right-4 z-[1000] bg-background/90 backdrop-blur border border-border rounded-lg p-3 text-xs space-y-1.5 shadow-sm">
       <div className="font-medium text-foreground">Match Score</div>
       <div className="flex items-center gap-2">
         <div className="flex gap-0.5">

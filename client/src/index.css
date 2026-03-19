@@ -127,7 +127,19 @@
     }
   html {
     @apply font-sans;
+    overscroll-behavior: none;
+    --sat: env(safe-area-inset-top, 0px);
+    --sar: env(safe-area-inset-right, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
     }
+}
+
+/* Hide Leaflet zoom controls on mobile — pinch-to-zoom suffices */
+@media (max-width: 1023px) {
+  .leaflet-control-zoom {
+    display: none !important;
+  }
 }
 
 /* Leaflet container sizing */
