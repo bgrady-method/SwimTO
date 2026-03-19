@@ -1,0 +1,20 @@
+app = "swimto"
+primary_region = "yyz"
+
+[build]
+
+[env]
+  ASPNETCORE_ENVIRONMENT = "Production"
+  ASPNETCORE_URLS = "http://+:8080"
+  ConnectionStrings__DefaultConnection = "Data Source=/data/swimto.db"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[mounts]
+  source = "swimto_data"
+  destination = "/data"

@@ -1,0 +1,4153 @@
+{
+  "generatedAt": "2026-03-19T20:21:24.416Z",
+  "summary": {
+    "totalSeedPools": 31,
+    "totalTorontoPools": 122,
+    "matchedPools": 31,
+    "unmatchedSeedPools": 0,
+    "missingFromSeed": 91,
+    "fieldsWithDiscrepancies": 50,
+    "scheduleNote": "ALL schedules in SeedData are algorithmically generated and do NOT reflect real Toronto schedules. Real drop-in schedule data is available via the Toronto Open Data API."
+  },
+  "poolAudits": [
+    {
+      "seedId": 1,
+      "seedName": "Pam McConnell Aquatic Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 2012,
+      "torontoName": "Pam McConnell Aquatic Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Pam McConnell Aquatic Centre",
+          "torontoValue": "Pam McConnell Aquatic Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "640 Dundas St E, Toronto",
+          "torontoValue": "640 DUNDAS ST E",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6598, -79.3592",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 8,
+          "torontoValue": "3 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-338-2237",
+          "torontoValue": " 416-338-2237",
+          "status": "mismatch"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=2012",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=2012",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 152,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Adapted Leisure Swim",
+          "Aquatic Fitness: Shallow",
+          "Aquatic Fitness: Shallow (Women)",
+          "Lane Swim",
+          "Lane Swim (Women)",
+          "Lane Swim: Older Adult",
+          "Leisure Swim",
+          "Leisure Swim (Women)",
+          "Leisure Swim: Older Adult",
+          "Leisure Swim: Open and Inclusive",
+          "Leisure Swim: Preschool"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 2,
+      "seedName": "John Innes Community Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 63,
+      "torontoName": "John Innes Community Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "John Innes Community Recreation Centre",
+          "torontoValue": "John Innes Community Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "150 Sherbourne St, Toronto",
+          "torontoValue": "150 SHERBOURNE ST",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6555, -79.3675",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-6779",
+          "torontoValue": "416-392-6779",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=63",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=63",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 48,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Shallow",
+          "Lane Swim"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 3,
+      "seedName": "Sunnyside Gus Ryder Outdoor Pool",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 433,
+      "torontoName": "Sunnyside Gus Ryder Outdoor Pool",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Sunnyside Gus Ryder Outdoor Pool",
+          "torontoValue": "Sunnyside Gus Ryder Outdoor Pool",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "1755 Lake Shore Blvd W, Toronto",
+          "torontoValue": "1755 Lake Shore Blvd W",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6372, -79.4535",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 50,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": false,
+          "torontoValue": "Partially Accessible",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0749",
+          "torontoValue": null,
+          "status": "seed_only"
+        },
+        {
+          "field": "Website",
+          "seedValue": null,
+          "torontoValue": null,
+          "status": "unverifiable"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 29,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 4,
+      "seedName": "Riverdale Park East",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 343,
+      "torontoName": "Riverdale Park East",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Riverdale Park East",
+          "torontoValue": "Riverdale Park East",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "550 Broadview Ave, Toronto",
+          "torontoValue": "550 Broadview Ave",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6687, -79.3536",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "None",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": null,
+          "torontoValue": "None",
+          "status": "toronto_only"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=343",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=343",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 28,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Women Only"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 5,
+      "seedName": "Donald D. Summerville Olympic Pools",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 437,
+      "torontoName": "Donald D. Summerville Olympic Pools",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Donald D. Summerville Olympic Pools",
+          "torontoValue": "Donald D. Summerville Olympic Pools",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "1867 Lake Shore Blvd E, Toronto",
+          "torontoValue": "1867 Lake Shore Blvd E",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6613, -79.3157",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 50,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 8,
+          "torontoValue": "3 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "None",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0748",
+          "torontoValue": null,
+          "status": "seed_only"
+        },
+        {
+          "field": "Website",
+          "seedValue": null,
+          "torontoValue": null,
+          "status": "unverifiable"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 29,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Older Adult"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 6,
+      "seedName": "Harrison Pool",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 45,
+      "torontoName": "Harrison Pool",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Harrison Pool",
+          "torontoValue": "Harrison Pool",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "15 Stephanie St, Toronto",
+          "torontoValue": "15 STEPHANIE ST",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.654, -79.391",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": "20 yards (~18m)",
+          "status": "mismatch",
+          "note": "Converted from yards"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": false,
+          "torontoValue": "Partially Accessible",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-7984",
+          "torontoValue": "416-392-7984",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=45",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=45",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 29,
+        "torontoSessionCount": 49,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 7,
+      "seedName": "Scadding Court Community Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 1098,
+      "torontoName": "Scadding Court Community Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Scadding Court Community Centre",
+          "torontoValue": "Scadding Court Community Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "707 Dundas St W, Toronto",
+          "torontoValue": "707 DUNDAS ST W",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6522, -79.401",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0335",
+          "torontoValue": "416-392-0335",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1098",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1098",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 88,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Adapted Leisure Swim",
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Lane Swim (Women)",
+          "Lane Swim: Quiet (No Music)",
+          "Leisure Swim",
+          "Leisure Swim (Women)",
+          "Leisure Swim: Preschool"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 8,
+      "seedName": "North Toronto Memorial Community Centre",
+      "matchConfidence": "probable",
+      "matchMethod": "address_address_match",
+      "torontoLocationId": 189,
+      "torontoName": "North Toronto Memorial Community Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "North Toronto Memorial Community Centre",
+          "torontoValue": "North Toronto Memorial Community Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "200 Eglinton Ave W, Toronto",
+          "torontoValue": "200 EGLINTON AVE W",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.7066, -79.405",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Both",
+          "status": "mismatch"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "2 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-6591",
+          "torontoValue": "416-392-6591",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=189",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=189",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 28,
+        "torontoSessionCount": 201,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Women Only"
+        ],
+        "torontoSwimTypes": [
+          "Adapted Leisure Swim",
+          "Aquatic Fitness: Arthritis",
+          "Aquatic Fitness: Deep",
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Lane Swim: Older Adult",
+          "Lane Swim: Quiet (No Music)",
+          "Leisure Swim",
+          "Leisure Swim: Preschool"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 9,
+      "seedName": "Matty Eckler Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 234,
+      "torontoName": "Matty Eckler Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Matty Eckler Recreation Centre",
+          "torontoValue": "Matty Eckler Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "953 Gerrard St E, Toronto",
+          "torontoValue": "953 GERRARD ST E",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.667, -79.338",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": false,
+          "torontoValue": "Partially Accessible",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0750",
+          "torontoValue": "416-392-0750",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=234",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=234",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 29,
+        "torontoSessionCount": 145,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Leisure Swim",
+          "Leisure Swim: Older Adult"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 10,
+      "seedName": "Wellesley Community Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 451,
+      "torontoName": "Wellesley Community Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Wellesley Community Centre",
+          "torontoValue": "Wellesley Community Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "495 Sherbourne St, Toronto",
+          "torontoValue": "495 SHERBOURNE ST",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.665, -79.374",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0227",
+          "torontoValue": "416-392-0227",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=451",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=451",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 29,
+        "torontoSessionCount": 239,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Older Adult"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Boot Camp",
+          "Aquatic Fitness: Deep",
+          "Aquatic Fitness: Shallow",
+          "Aquatic Fitness: Shallow (Women)",
+          "Aquatic Fitness: Walking",
+          "Lane Swim",
+          "Lane Swim (Men)",
+          "Lane Swim (Women)",
+          "Lane Swim: Older Adult",
+          "Leisure Swim",
+          "Leisure Swim (Women)",
+          "Leisure Swim: Older Adult",
+          "Leisure Swim: Open and Inclusive",
+          "Leisure Swim: Preschool",
+          "Leisure Swim: Youth",
+          "Level Up - Drop In Lessons (Youth)"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 11,
+      "seedName": "Dennis R. Timbrell Resource Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 1056,
+      "torontoName": "Dennis R. Timbrell Resource Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Dennis R. Timbrell Resource Centre",
+          "torontoValue": "Dennis R. Timbrell Resource Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "29 St Dennis Dr, Toronto",
+          "torontoValue": "29 ST DENNIS DR",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.7175, -79.34",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-395-7972",
+          "torontoValue": "416-395-7972",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1056",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1056",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 120,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Leisure Swim",
+          "Leisure Swim (Women)",
+          "Leisure Swim - March Break"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 12,
+      "seedName": "Agincourt Community Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 523,
+      "torontoName": "Agincourt Community Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Agincourt Community Recreation Centre",
+          "torontoValue": "Agincourt Community Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "31 Glen Watford Dr, Toronto",
+          "torontoValue": "31 GLEN WATFORD DR",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.7888, -79.281",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-396-4037",
+          "torontoValue": "416-396-4037",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=523",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=523",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 31,
+        "torontoSessionCount": 270,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Women Only"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Lane Swim: Older Adult",
+          "Leisure Swim",
+          "Leisure Swim: Preschool"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 13,
+      "seedName": "Centennial Recreation Centre - Scarborough",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 537,
+      "torontoName": "Centennial Recreation Centre - Scarborough",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Centennial Recreation Centre - Scarborough",
+          "torontoValue": "Centennial Recreation Centre - Scarborough",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "1967 Ellesmere Rd, Toronto",
+          "torontoValue": "1967 ELLESMERE RD",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.7713, -79.2458",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "None",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-396-4057",
+          "torontoValue": "416-396-4057",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=537",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=537",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 124,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Deep",
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Lane Swim: Older Adult",
+          "Leisure Swim",
+          "Leisure Swim (Men)"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 14,
+      "seedName": "Douglas Snow Aquatic Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 567,
+      "torontoName": "Douglas Snow Aquatic Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Douglas Snow Aquatic Centre",
+          "torontoValue": "Douglas Snow Aquatic Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "5100 Yonge St, Toronto",
+          "torontoValue": "5100 YONGE ST",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.725, -79.431",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": false,
+          "torontoValue": "Partially Accessible",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": null,
+          "torontoValue": "None",
+          "status": "toronto_only"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=567",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=567",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 202,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Arthritis",
+          "Aquatic Fitness: Shallow",
+          "Lane Swim: Long Course (50m)",
+          "Lane Swim: Older Adult",
+          "Lane Swim: Short Course (25m)",
+          "Leisure Swim",
+          "Leisure Swim: Preschool"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 15,
+      "seedName": "Joseph J. Piccininni Community Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 509,
+      "torontoName": "Joseph J. Piccininni Community Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Joseph J. Piccininni Community Recreation Centre",
+          "torontoValue": "Joseph J. Piccininni Community Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "1369 St Clair Ave W, Toronto",
+          "torontoValue": "1369 ST CLAIR AVE W",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6773, -79.4523",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": false,
+          "torontoValue": "Partially Accessible",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0036",
+          "torontoValue": "416-392-0036",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=509",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=509",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 32,
+        "torontoSessionCount": 186,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Older Adult"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Leisure Swim",
+          "Leisure Swim (Women)",
+          "Leisure Swim: Preschool"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 16,
+      "seedName": "Monarch Park",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 145,
+      "torontoName": "Monarch Park",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Monarch Park",
+          "torontoValue": "Monarch Park",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "115 Felstead Ave, Toronto",
+          "torontoValue": "115 Felstead Ave",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.678, -79.338",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": "25m",
+          "status": "mismatch"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "None",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": null,
+          "torontoValue": "None",
+          "status": "toronto_only"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=145",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=145",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 28,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Women Only"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 17,
+      "seedName": "Christie Pits Park",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 196,
+      "torontoName": "Christie Pits Park",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Christie Pits Park",
+          "torontoValue": "Christie Pits Park",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "750 Bloor St W, Toronto",
+          "torontoValue": "750 Bloor St W",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6647, -79.425",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "4 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": false,
+          "torontoValue": "None",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": null,
+          "torontoValue": "None",
+          "status": "toronto_only"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=196",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=196",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 18,
+      "seedName": "Greenwood Park",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 70,
+      "torontoName": "Greenwood Park",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Greenwood Park",
+          "torontoValue": "Greenwood Park",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "150 Greenwood Ave, Toronto",
+          "torontoValue": "150 Greenwood Ave",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.67, -79.327",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": false,
+          "torontoValue": "None",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": null,
+          "torontoValue": "None",
+          "status": "toronto_only"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=70",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=70",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 29,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 19,
+      "seedName": "McGregor Park Community Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 506,
+      "torontoName": "McGregor Park Community Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "McGregor Park Community Centre",
+          "torontoValue": "McGregor Park Community Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "2231 Lawrence Ave E, Toronto",
+          "torontoValue": "2231 LAWRENCE AVE E",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.7468, -79.273",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-396-4023",
+          "torontoValue": "416-396-4023",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=506",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=506",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 20,
+      "seedName": "Rouge Valley Community Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 3858,
+      "torontoName": "Rouge Valley Community Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Rouge Valley Community Recreation Centre",
+          "torontoValue": "Rouge Valley Community Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "8450 Sheppard Ave E, Toronto",
+          "torontoValue": "8450 SHEPPARD AVE E",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.792, -79.162",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "2 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "None",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-338-8333",
+          "torontoValue": "416-338-8333",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=3858",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=3858",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 31,
+        "torontoSessionCount": 87,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Older Adult",
+          "Women Only"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Deep",
+          "Aquatic Fitness: Deep (Women)",
+          "Aquatic Fitness: Shallow",
+          "Aquatic Fitness: Shallow (Women)",
+          "Aquatic Fitness: Walking",
+          "Lane Swim",
+          "Lane Swim (Women)",
+          "Lane Swim: Older Adult",
+          "Lane Swim: Quiet (No Music)",
+          "Leisure Swim",
+          "Leisure Swim: Adult",
+          "Leisure Swim: Preschool"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 21,
+      "seedName": "Weston Lions Park",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 508,
+      "torontoName": "Weston Lions Park",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Weston Lions Park",
+          "torontoValue": "Weston Lions Park",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "2125 Lawrence Ave W, Toronto",
+          "torontoValue": "2125 Lawrence Ave W",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.7134, -79.5167",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "2 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "None",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": null,
+          "torontoValue": "None",
+          "status": "toronto_only"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=508",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=508",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 29,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 22,
+      "seedName": "Grandravine Community Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 647,
+      "torontoName": "Grandravine Community Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Grandravine Community Recreation Centre",
+          "torontoValue": "Grandravine Community Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "23 Grandravine Dr, Toronto",
+          "torontoValue": "23 GRANDRAVINE DR",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.738, -79.47",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-395-6171",
+          "torontoValue": "416-395-6171",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=647",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=647",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 23,
+      "seedName": "Etobicoke Olympium",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 892,
+      "torontoName": "Etobicoke Olympium",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Etobicoke Olympium",
+          "torontoValue": "Etobicoke Olympium",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "590 Rathburn Rd, Toronto",
+          "torontoValue": "590 RATHBURN RD",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6539, -79.5575",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 50,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 8,
+          "torontoValue": "2 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-394-8111",
+          "torontoValue": "416-394-8111",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=892",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=892",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 128,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Lane Swim: Long Course (50m)",
+          "Lane Swim: Older Adult",
+          "Lane Swim: Short Course (25m)",
+          "Leisure Swim",
+          "Leisure Swim: Family"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 24,
+      "seedName": "S.H. Armstrong Community Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 267,
+      "torontoName": "S.H. Armstrong Community Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "S.H. Armstrong Community Recreation Centre",
+          "torontoValue": "S.H. Armstrong Community Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "56 Woodfield Rd, Toronto",
+          "torontoValue": "56 WOODFIELD RD",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6713, -79.317",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": false,
+          "torontoValue": "Partially Accessible",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0734",
+          "torontoValue": "416-392-0734",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=267",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=267",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 31,
+        "torontoSessionCount": 16,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Women Only"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Shallow (Women)",
+          "Lane Swim",
+          "Leisure Swim",
+          "Leisure Swim (Women)"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 25,
+      "seedName": "Leaside Gardens Indoor Pool",
+      "matchConfidence": "probable",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 542,
+      "torontoName": "Leaside Gardens Indoor Pool",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Leaside Gardens Indoor Pool",
+          "torontoValue": "Leaside Gardens Indoor Pool",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "1073 Millwood Rd, Toronto",
+          "torontoValue": "1073 Millwood Rd None",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.705, -79.361",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "None",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": null,
+          "torontoValue": null,
+          "status": "unverifiable"
+        },
+        {
+          "field": "Website",
+          "seedValue": null,
+          "torontoValue": null,
+          "status": "unverifiable"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 29,
+        "torontoSessionCount": 156,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Older Adult"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Arthritis",
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 26,
+      "seedName": "Wallace Emerson Community Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 294,
+      "torontoName": "Wallace Emerson Community Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Wallace Emerson Community Recreation Centre",
+          "torontoValue": "Wallace Emerson Community Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "1260 Dufferin St, Toronto",
+          "torontoValue": "1260 DUFFERIN ST",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.663, -79.436",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": false,
+          "torontoValue": "Partially Accessible",
+          "status": "mismatch"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0039",
+          "torontoValue": "416-392-0039",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=294",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=294",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 111,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Arthritis",
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Leisure Swim",
+          "Leisure Swim: Adult",
+          "Leisure Swim: Preschool"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 27,
+      "seedName": "Gus Ryder Pool and Health Club",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 896,
+      "torontoName": "Gus Ryder Pool and Health Club",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Gus Ryder Pool and Health Club",
+          "torontoValue": "Gus Ryder Pool and Health Club",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "1 Faustina Dr, Toronto",
+          "torontoValue": "1 FAUSTINA DR",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.601, -79.505",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-394-8726",
+          "torontoValue": "416-394-8726",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=896",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=896",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 29,
+        "torontoSessionCount": 187,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Arthritis",
+          "Aquatic Fitness: Boot Camp",
+          "Aquatic Fitness: Shallow",
+          "Aquatic Fitness: Walking",
+          "Lane Swim",
+          "Leisure Swim",
+          "Leisure Swim (Women)"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 28,
+      "seedName": "Jimmie Simpson Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 58,
+      "torontoName": "Jimmie Simpson Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Jimmie Simpson Recreation Centre",
+          "torontoValue": "Jimmie Simpson Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "870 Queen St E, Toronto",
+          "torontoValue": "870 QUEEN ST E",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6595, -79.3401",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "2 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0751",
+          "torontoValue": "416-392-0751",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=58",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=58",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 28,
+        "torontoSessionCount": 95,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Women Only"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Leisure Swim",
+          "Leisure Swim: Older Adult",
+          "Leisure Swim: Preschool"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 29,
+      "seedName": "Parkdale Community Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 243,
+      "torontoName": "Parkdale Community Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Parkdale Community Recreation Centre",
+          "torontoValue": "Parkdale Community Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "75 Lansdowne Ave, Toronto",
+          "torontoValue": "75 LANSDOWNE AVE",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.6421, -79.4443",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": "25m",
+          "status": "mismatch"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-6696",
+          "torontoValue": "416-392-6696",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=243",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=243",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 26,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 30,
+      "seedName": "Annette Community Recreation Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 17,
+      "torontoName": "Annette Community Recreation Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Annette Community Recreation Centre",
+          "torontoValue": "Annette Community Recreation Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "333 Annette St, Toronto",
+          "torontoValue": "333 ANNETTE ST",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.662, -79.468",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Indoor",
+          "torontoValue": "Indoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 4,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-392-0736",
+          "torontoValue": "416-392-0736",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=17",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=17",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 32,
+        "torontoSessionCount": 167,
+        "seedSwimTypes": [
+          "Aquafit",
+          "Family",
+          "Lane Swim",
+          "Leisure Swim",
+          "Older Adult"
+        ],
+        "torontoSwimTypes": [
+          "Aquatic Fitness: Arthritis",
+          "Aquatic Fitness: Deep",
+          "Aquatic Fitness: Shallow",
+          "Lane Swim",
+          "Lane Swim: Older Adult",
+          "Leisure Swim"
+        ],
+        "note": "Seed schedules are algorithmically generated — replace with Toronto data"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    },
+    {
+      "seedId": 31,
+      "seedName": "Roding Community Centre",
+      "matchConfidence": "confirmed",
+      "matchMethod": "pool_type_exact",
+      "torontoLocationId": 744,
+      "torontoName": "Roding Community Centre",
+      "fields": [
+        {
+          "field": "Name",
+          "seedValue": "Roding Community Centre",
+          "torontoValue": "Roding Community Centre",
+          "status": "match"
+        },
+        {
+          "field": "Address",
+          "seedValue": "600 Roding St, Toronto",
+          "torontoValue": "600 RODING ST",
+          "status": "mismatch"
+        },
+        {
+          "field": "Coordinates",
+          "seedValue": "43.7535, -79.5225",
+          "torontoValue": null,
+          "status": "seed_only",
+          "note": "No coordinates in Toronto data"
+        },
+        {
+          "field": "Pool Type",
+          "seedValue": "Outdoor",
+          "torontoValue": "Outdoor",
+          "status": "match"
+        },
+        {
+          "field": "Length (meters)",
+          "seedValue": 25,
+          "torontoValue": null,
+          "status": "unverifiable",
+          "note": "No length data in Toronto description"
+        },
+        {
+          "field": "Lane Count",
+          "seedValue": 6,
+          "torontoValue": "1 tank(s)",
+          "status": "unverifiable",
+          "note": "Toronto provides tank count, not lane count"
+        },
+        {
+          "field": "Accessibility",
+          "seedValue": true,
+          "torontoValue": "Fully Accessible",
+          "status": "match"
+        },
+        {
+          "field": "Phone",
+          "seedValue": "416-395-7964",
+          "torontoValue": "416-395-7964",
+          "status": "match"
+        },
+        {
+          "field": "Website",
+          "seedValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=744",
+          "torontoValue": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=744",
+          "status": "match"
+        }
+      ],
+      "scheduleComparison": {
+        "seedSessionCount": 26,
+        "torontoSessionCount": 0,
+        "seedSwimTypes": [
+          "Family",
+          "Lane Swim",
+          "Leisure Swim"
+        ],
+        "torontoSwimTypes": [],
+        "note": "NO SCHEDULE DATA from Toronto for this location"
+      },
+      "adversarial": {
+        "reviewPath": "agreed",
+        "disputeReasons": [],
+        "arbiterDecision": null,
+        "arbiterReasoning": null
+      }
+    }
+  ],
+  "missingPools": [
+    {
+      "locationId": 24,
+      "name": "Beaches Recreation Centre",
+      "address": "6 WILLIAMSON RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Partially Accessible",
+      "description": "Beaches Recreation Centre is the centre of the Beaches community and offers programming for all ages.",
+      "phone": "416-392-0740",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=24",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 27,
+      "name": "Bedford Park Community Centre",
+      "address": "81 RANLEIGH AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Bedford Park Community Centre is a shared-use facility located in the Yonge Street & Lawrence Avenue East area. Bedford Park is not a large centre, but it does offer a wide variety of programs for the community. Throughout the Fall, Winter and Spring, Bedford Park offers preschool programs, older adult programs, fitness programs, sports programs and swimming lessons. During the summer months, Bedford Park offers summer camps, fitness classes, an older adult drop-in program and swimming lessons.",
+      "phone": "416-392-0618",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=27",
+      "district": "North York"
+    },
+    {
+      "locationId": 36,
+      "name": "Earl Beatty Community Centre",
+      "address": "455 GLEBEHOLME BLVD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Earl Beatty Community Centre offers a wide variety of recreational programs for all ages including: swimming lessons, camp programs in  March and during the day in the summer, creative arts, ballet, jazz, gymnastics beginner recreational and advanced, caregiver & tot playtime, kinder gym, karate beginner intermediate and advanced, soccer house league, ball hockey. The Community Centre also offers fitness activities such as yoga, Pilates, and Zumba and Youth leadership training in babysitting.",
+      "phone": "416-392-0752",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=36",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 39,
+      "name": "Frankland Community Centre",
+      "address": "816 LOGAN AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>This small facility is located in Frankland School. The pool, two rooms and the gym are used to run programs during the day and after school.</p>\n<p>This is an <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/camps-after-school/after-school-recreation-care/\">After-School Recreation Care (ARC) location</a>. </p>",
+      "phone": "416-392-0749",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=39",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 42,
+      "name": "Antibes Community Centre",
+      "address": "140 ANTIBES DR",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>Meeting rooms can be booked by contacting the centre. </p>\n<p>Antibes Community Centre is located in the Bathurst Street and Finch Avenue West area. </p>\n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>.</p>\n<p>This centre has a dedicated <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/youth-recreation/\">enhanced youth space</a>.</p>\n<p>This is an <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/camps-after-school/after-school-recreation-care/\">After-School Recreation Care (ARC) location</a>. </p>",
+      "phone": "416-395-0096",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=42",
+      "district": "North York"
+    },
+    {
+      "locationId": 48,
+      "name": "Hillcrest Community Centre",
+      "address": "1339 BATHURST ST",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Partially Accessible",
+      "description": "Attached to one of the Toronto District School Board schools (Hillcrest Public School), Hillcrest Community Centre offers programs and activities for residents of all ages. Recreation staff are available in the office who can provide program registration and information about events in the facility, satellite locations and the community.",
+      "phone": "416-392-0746",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=48",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 85,
+      "name": "Main Square Community Recreation Centre",
+      "address": "245 MAIN ST",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "This three-level facility houses two multipurpose areas and a kitchen.",
+      "phone": "416-392-1070",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=85",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 100,
+      "name": "Mary McCormick Recreation Centre",
+      "address": "66 SHERIDAN AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Partially Accessible",
+      "description": "<p>The 25-yard, <a href=\"https://www.toronto.ca/city-government/accessibility-human-rights/accessibility-at-the-city-of-toronto/city-services-for-people-with-disabilities/accessible-recreation-facilities-equipment/\">warm water pool</a> has a viewing gallery. The centre also has a gymnasium, two preschool rooms, and youth and older adult lounges. A family/universal change room is available at this location.</p>\n<p>This is an <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/camps-after-school/after-school-recreation-care/\">After-School Recreation Care (ARC) location</a>. </p>",
+      "phone": "416-392-0742",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=100",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 272,
+      "name": "St. Lawrence Community Recreation Centre",
+      "address": "230 THE ESPLANADE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Partially Accessible",
+      "description": "St. Lawrence Community Centre is located in the historic St. Lawrence Neighbourhood of downtown Toronto. The community centre shares its space with Market Lane Public School and the St. Lawrence Community Day Care. It offers a full range of programming for families, children, adults and older adults.<br><br>\n\nThere are two squash courts that are available to reserve by calling the centre.",
+      "phone": "416-392-1347",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=272",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 282,
+      "name": "Swansea Community Recreation Centre",
+      "address": "15 WALLER AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Partially Accessible",
+      "description": "The Swansea Community Recreation Centre and Pool has been servicing the Swansea community, in Bloor West Village, for over 25 years.",
+      "phone": "416-392-6796",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=282",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 287,
+      "name": "Trinity Community Recreation Centre",
+      "address": "155 CRAWFORD ST",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "This open-concept centre is located within Trinity Bellwoods Park, and features a gymnasium with resilient maple flooring with rubber pads. A family/universal change room is available at this location.",
+      "phone": "416-392-0743",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=287",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 308,
+      "name": "Fairmount Park Community Centre",
+      "address": "1757 GERRARD ST E",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Fairmount Park Community Centre is a shared use facility that offers programs in two large community spaces. School age art, dance programs and adult fitness are the main programs.",
+      "phone": "416-392-7060",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=308",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 329,
+      "name": "East York Community Recreation Centre",
+      "address": "1081 1/2 PAPE AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>A family/universal change room is available at this location.</p>\n<p>This is an <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/camps-after-school/after-school-recreation-care/\">After-School Recreation Care (ARC) location</a>. </p>",
+      "phone": "416-396-2880",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=329",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 342,
+      "name": "Northview Heights Secondary School",
+      "address": "550 FINCH AVE W",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Northview Heights Secondary School is one of the Toronto District School Board (TDSB) locations where the City of Toronto offers recreation programs. Aquatics instructional programming is offered in a 25 metre pool for all ages.  In the gym, we offer gymnastics based programming from beginner to advanced levels for all ages and abilities!  Come out and learn new skills on our high/low bars, balance beam, vault and floor!<br />\n<br />\nFor gymnastics programs call: 416-395-7873<br />\nFor aquatic programs call: 416-395-7616",
+      "phone": "416-395-7965",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=342",
+      "district": "North York"
+    },
+    {
+      "locationId": 357,
+      "name": "Humber Community Pool",
+      "address": "205 HUMBER COLLEGE BLVD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Humber Community Pool is located at the far west end of <a href=\"https://humber.ca/contact-us/maps/#north\">Humber College's North Campus</a>. It is a leisure concept pool and includes a ramp entrance. The pool's front door is off driveway E or Beech Forrest Drive. <br><br>\n\nDuring swim times, parking is available in Lot 12. This is a gated lot - push the white button and wait for an attendant to raise the gate. Give your licence plate number upon entering the pool building. <br><br>\n\n<strong>Humber Swim</strong> is a lane swim exclusively for Humber College/Guelph-Humber University staff, students, athletic members and alumni. A valid Humber/Guelph-Humber ID card must be shown to access this swim.",
+      "phone": "416-394-6050",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=357",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 499,
+      "name": "Cummer Park Community Centre",
+      "address": "6000 LESLIE ST",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "A family/universal change room is available at this location. There are two squash courts that are available for those with an <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/sports/sports-activities/?accordion=drop-in-program-memberships-passes\">drop-in program athletic membership</a>.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=499",
+      "district": "North York"
+    },
+    {
+      "locationId": 507,
+      "name": "Birchmount Community Centre",
+      "address": "93 BIRCHMOUNT RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "The Birchmount Community Centre is a multipurpose facility with programs and services offered through the Birchmount Bluffs Neighbourhood Centre.<br><br>\nThe leisure pool has a warm conversation pool with jets, a large water slide, and a shallow area and slide for children. It also has a sauna. A family/universal change room is available at this location. Skating programs are held at the indoor rink in <a href=\"/data/parks/prd/facilities/complex/3493/index.html\">Scarborough Gardens Arena</a> nearby.",
+      "phone": "416-396-4311",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=507",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 510,
+      "name": "Runnymede Collegiate Institute",
+      "address": "569 JANE ST",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-394-2747",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=510",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 795,
+      "name": "The Elms Community School and Pool",
+      "address": "45 Golfdown Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>The Elms Pool and Community School is located east of Islington Avenue, north of Highway 401. The school caters to a wide variety of cultural, socioeconomic and religious groups and offers programs for all ages. Meeting rooms can be booked by contacting the facility. </p>\n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>.</p>",
+      "phone": "416-394-8722",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=795",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 797,
+      "name": "Norseman Community School and Pool",
+      "address": "105 NORSEMAN ST",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Partially Accessible",
+      "description": "A Community School located south of Bloor Street, one block east of Islington Avenue, on Norseman Avenue. We are a Community School that also has a pool on site. We offer a wide range of programs from sports, dance, and music, to fitness and preschool. Programs are available from preschool to older adults. The 25-metre Norseman Community Pool offers both recreational and learn-to-swim programs to all ages and abilities. Norseman Pool is also known for its daytime aqua fitness classes focusing on the older adult population. Norseman is also home to the Norseman Masters Aquatic Club as well as offering a popular recreational swim team program to children in the community.",
+      "phone": "416-394-8719",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=797",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 891,
+      "name": "Memorial Pool and Health Club",
+      "address": "44 MONTGOMERY RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "Meeting rooms can be booked by contacting the facility. For more information, please contact the centre.<br/><br/>\nMemorial Pool and Health Club offers a variety of aquatic programming for persons of all ages and abilities. A family/universal change room is available at this location.",
+      "phone": "416-394-8731",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=891",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 893,
+      "name": "Albion Pool and Health Club",
+      "address": "1485 ALBION RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "The Albion Pool Health Club is equipped with cardio machines, weight machines and free weights. Other amenities include meeting rooms, change rooms and a pool spectator gallery.",
+      "phone": "416-394-8676",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=893",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 897,
+      "name": "Alderwood Pool",
+      "address": "2 ORIANNA DR",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "Meeting rooms can be booked by contacting the facility. For more information, please contact the centre.",
+      "phone": "416-394-8738",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=897",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 1110,
+      "name": "Albert Campbell Collegiate Institute",
+      "address": "1550 SANDHURST CIR",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-396-4009",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1110",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 1143,
+      "name": "Cedarbrae Collegiate Institute",
+      "address": "550 MARKHAM RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-396-4006",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1143",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 1163,
+      "name": "CW Jefferys Collegiate Institute",
+      "address": "340 SENTINEL RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": " 416-395-7879",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1163",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 1164,
+      "name": "DA Morrison Middle School",
+      "address": "271 GLEDHILL AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-392-0157",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1164",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 1186,
+      "name": "Emery Collegiate Institute",
+      "address": "3395 WESTON RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>Emery Collegiate Institute has a 25-yard, five-lane pool. </p>\n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>.</p>",
+      "phone": "416-395-7950",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1186",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 1200,
+      "name": "Georges Vanier Secondary School",
+      "address": "3000 DON MILLS RD E",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1200",
+      "district": "North York"
+    },
+    {
+      "locationId": 1205,
+      "name": "Gordon A. Brown Middle School",
+      "address": "2800 ST CLAIR AVE E",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-392-6368",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1205",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 1250,
+      "name": "L'Amoreaux Collegiate Institute",
+      "address": "2501 BRIDLETOWNE CIR",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-396-4005",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1250",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 1255,
+      "name": "Lester B. Pearson Collegiate Institute",
+      "address": "150 TAPSCOTT RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-396-4010",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1255",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 1315,
+      "name": "Sir Oliver Mowat Collegiate Institute",
+      "address": "5400 LAWRENCE AVE E",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-396-4007",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1315",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 1371,
+      "name": "Vaughan Road Academy",
+      "address": "529 VAUGHAN RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>Vaughan Road Academy pool is a Toronto District School Board pool located at Vaughan Road and Oakwood Avenue. Pool users can use Entrance 7. General recreation facility users can use Entrance 5 to access the facility. For non-aquatic information, call 416-394-2473.</p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1371",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 1373,
+      "name": "Victoria Park Collegiate Institute",
+      "address": "15 WALLINGFORD RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1373",
+      "district": "North York"
+    },
+    {
+      "locationId": 1381,
+      "name": "West Hill Collegiate Institute",
+      "address": "350 MORNINGSIDE AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-396-4008",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1381",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 1384,
+      "name": "Weston Collegiate Institute",
+      "address": "100 PINE ST",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-394-2739",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1384",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 1387,
+      "name": "Wexford Collegiate Institute",
+      "address": "1176 PHARMACY AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "416-336-4016",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1387",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 1399,
+      "name": "York Mills Collegiate Institute",
+      "address": "490 YORK MILLS RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1399",
+      "district": "North York"
+    },
+    {
+      "locationId": 2773,
+      "name": "Toronto Pan Am Sports Centre",
+      "address": "875 MORNINGSIDE AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 3,
+      "accessibility": "Fully Accessible",
+      "description": "The Toronto Pan Am Sports Centre (TPASC) is co-owned by the City of Toronto and the University of Toronto Scarborough. This facility is 312,000 square feet and is located on the corner of Tams Road and Morningside Ave. TPASC has two Olympic-sized, 10 lane swimming pools; a 25m diving tank with diving platforms and spring diving boards; four gymnasiums built to international standards equipped with both a high-quality maple sprung board floor and a synthetic polyvinyl sport floor; a 200m indoor track; double story fitness centre; a 41-foot high climbing wall; and four teaching studios. This recreation centre offers programs for children, youth adults and older adults. A family/universal change room is available at this location.<br><br> Drop-in swimming programs at this location are offered by the Toronto Pan Am Sports Centre directly. Please visit <a href=\"https://tpasc.ca\" target=\"_blank\">tpasc.ca</a> for drop-in swim schedules",
+      "phone": "416-283-5222",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=2773",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 3501,
+      "name": "York Recreation Centre",
+      "address": "115 BLACK CREEK DR",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 2,
+      "accessibility": "None",
+      "description": "<p>York Recreation Centre has a double-sized gymnasium, a weight room, an indoor running track and a fitness studio. The six-lane, 25-metre pool has a ramp and the shallow leisure tot pool has water features and ramp and stair access. A family/universal change room is available at this location.</p> \n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>.</p>",
+      "phone": "416-392-9675",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=3501",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 3732,
+      "name": "One Yonge Community Recreation Centre",
+      "address": "24 Freeland St",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>One Yonge Community Recreation Centre is a multi-purpose facility at the base of Yonge Street. The pool features a poolside climbing wall. </p>\n<p>This is an <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/camps-after-school/after-school-recreation-care/\">After-School Recreation Care (ARC) location</a>. </p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=3732",
+      "district": "Toronto East York"
+    },
+    {
+      "locationId": 3775,
+      "name": "Ethennonnhawahstihnen' Community Recreation Centre and Library",
+      "address": "100 Ethennonnhawahstihnen' Lane",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Indoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>Completed in 2023, Ethennonnhawahstihnen’ (pronounced Etta-nonna wasti-nuh) is a multi-use Community Recreation Centre with an Aquatic Centre, Child Care Centre and a <a href=\"https://www.torontopubliclibrary.ca/\" target=\"_blank\">Toronto Public Library</a> branch.</p>\n\n<p>This is an <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/camps-after-school/after-school-recreation-care/\">After-School Recreation Care (ARC) location</a>. </p>\n\n<p>The community recreation centre, street, and adjacent area are located within 800 metres of a significant Huron-Wendat archaeological site - the Moatfield Ossuary and village (1280 CE to 1320 CE). </p>\n\n<p>Recognizing the significance of the site, in 2019, the City of Toronto Indigenous Affairs Office reached out to the Mississaugas of the Credit First Nation and Huron-Wendat Nation to understand how the City could commemorate the site and foster dialogue between current residents and Indigenous communities.</p>\n\n<p>Ultimately, the Wendat name, Ethennonnhawahstihnen', meaning \"where they had a good, beautiful life\", was suggested by the Huron-Wendat Nation to rename nearby Woodsy Park (located at 80 McMahon Dr.) and Woodsy Park Lane.</p>\n\n<p>In a separate process, the Toronto Public Library (TPL) Board approved the name \"Ethennonnhawahstihnen’ Branch\" for the new onsite TPL branch on January 24, 2022, based on advice from the TPL Naming Committee and the TPL Indigenous Advisory Council, which endorsed the name, with the understanding that Ethennonnhawahstihnen' was the preferred name of the Huron-Wendat Nation.</p>",
+      "phone": "416-392-4826",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=3775",
+      "district": "North York"
+    },
+    {
+      "locationId": 7,
+      "name": "Broadlands Community Recreation Centre",
+      "address": "19 CASTLEGROVE BLVD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool (summer) or the outdoor rink (winter).<br><br>\nA small community centre located in the DVP (Don Valley Parkway) and Lawrence Avenue East area in a residential community. Programs are offered for preschoolers, children, adults and older adults. Rooms can also be permitted by groups or individuals.",
+      "phone": "416-395-7966",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=7",
+      "district": "North York"
+    },
+    {
+      "locationId": 31,
+      "name": "Alexandra Park",
+      "address": "275 Bathurst St",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>Alexandra Park is a 2.7-hectare park at Bathurst Street and Dundas Street West. The Harry Gairey Outdoor Artificial Ice Rink is located in the northwest corner of the park. The Outdoor Pool is located in the northeast corner of the park. There is a building with changerooms and washrooms between the two amenities. The Scadding Court Community Centre is north of the park.</p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=31",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 77,
+      "name": "High Park",
+      "address": "1873 Bloor St W",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>High Park is a large, centrally located park that combines extensive natural areas with maintained parkland, recreational facilities and popular attractions that can be enjoyed year-round. Recognized as one of the most significant natural sites within the City of Toronto, over one-third of the park remains in a natural state. High Park is home to many species of wildlife and contains an outstanding concentration of rare plant species. Visit the <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/beaches-gardens-attractions/high-park/\">High Park feature park page</a> for more information about this park.</p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=77",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 352,
+      "name": "Kidstown - Water Park",
+      "address": "3159 Birchmount Rd None",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Kidstown is the only water park operated by the City of Toronto. It's one of Scarborough's most popular outdoor water facilities for preschool and grade school children.  It offers a variety of water features, including a tipping bucket, spray rings, squirting aquatic animals, a slide, wading pool, splash pad and so much more.  Families enjoy the grassy picnic area, which is suitable for watching older children while enjoying the park atmosphere. <br><br>\nKidstown is typically open from mid-June until the Sunday of the Labour Day weekend and closed on Labour Day.",
+      "phone": null,
+      "website": null,
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 421,
+      "name": "Stan Wadlow Park",
+      "address": "888 Cosburn Ave",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>Stan Wadlow Park is an 8.5-hectare park near O'Connor Avenue and Woodbine Avenue. At the southwest corner of the park is East York Memorial Arena and at the northwest corner of the park, on Cedarvale Avenue, is the Kiwanis Outdoor Pool.</p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=421",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 425,
+      "name": "Leaside Park",
+      "address": "5 Leaside Park Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "This 3.4 hectare park near Millwood Road and Overlea Boulevard features a lit ball diamond, six lit tennis courts, a multipurpose sports field and a children's playground. The park is also home to the Leaside Outdoor Pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=425",
+      "district": "North York"
+    },
+    {
+      "locationId": 480,
+      "name": "Amesbury Sports Complex",
+      "address": "155 CULFORD RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool (summer) and the indoor ice rink (fall and winter).<br><br>\n\nAmesbury Sports Complex is located between Black Creek Drive and Keele Street. The entrance to the parking lot is on Culford Road.",
+      "phone": "416-395-6683",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=480",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 502,
+      "name": "Fairbank Memorial Park",
+      "address": "2213 Dufferin St",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 2,
+      "accessibility": "None",
+      "description": "This 3.5 hectare park on Dufferin Street just south of Eglinton Avenue features a lit ball diamond, a basketball court, a children's playground and two outdoor pools. Located on-site is the Fairbank Memorial Community Recreation Centre.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=502",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 504,
+      "name": "Smythe Park",
+      "address": "61 Black Creek Blvd",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 2,
+      "accessibility": "None",
+      "description": "A 15.3 hectare park along the Black Creek ravine between Jane Street and Scarlett Road north of St. Clair Avenue West. This park features trails along the Black Creek, three ball diamonds (one with lights), a splash pad and a children's playground. At the east end of the park is the Smythe Park Outdoor Pool. \n<br /><br />\nThe outdoor pool is located in the heart of Smythe Park. It can be reached easily from the parking lot at the end of Black Creek Trail, which <strong>enters the park from Scarlett Road</strong>. The outdoor pool includes a baby/tot pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=504",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 514,
+      "name": "Earlscourt Park",
+      "address": "1200 Lansdowne Ave",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "A 12.6-hectare park at Caledonia Road and St. Clair Avenue West. This park feature a lit artificial turf soccer field, a lit multipurpose sports field and track, a ball diamond, four tennis courts, basketball court, volleyball court, a children's playground, a wading pool and many walking paths. The fenced <a href=\"https://www.toronto.ca/community-people/animals-pets/pets-in-the-city/dog-off-leash-areas/\">Dogs Off-Leash Area</a> allows <a href=\"https://www.toronto.ca/services-payments/permits-licences-bylaws/commercial-dog-walker-permit/\">Commercial Dog Walkers</a>.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=514",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 557,
+      "name": "Blantyre Park",
+      "address": "180 Fallingbrook Rd",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool.<br><br>\nA 2.5 hectare park near Victoria Park Avenue and Kingston Road This park features a lit  ball diamond, a picnic area, a horseshoe pit and a children's playground. Located at the north end of the park is the Blantyre Park Outdoor Pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=557",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 575,
+      "name": "Driftwood Community Recreation Centre",
+      "address": "4401 JANE ST",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>Driftwood Community Centre is a 75,000 square foot centre located at the intersection of Jane Street and Driftwood Avenue. </p>\n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>.</p>\n<p>This centre has a dedicated <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/youth-recreation/\">enhanced youth space</a>.</p>",
+      "phone": "416-395-0226",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=575",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 633,
+      "name": "Heron Park Community Recreation Centre",
+      "address": "292 MANSE RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>Heron Park Community Recreation Centre offers programming for residents of all ages.</p>\n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>.</p>\n<p>This centre has a dedicated <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/youth-recreation/\">enhanced youth space</a>.</p>",
+      "phone": "416-396-4035",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=633",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 638,
+      "name": "Glen Long Community Centre",
+      "address": "35 GLEN LONG AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Partially Accessible",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool (summer) or the outdoor rink (winter).<br><br>This centre is located in the Lawrence Avenue West and Dufferin Street area, and features a variety of programming.",
+      "phone": "416-395-7921",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=638",
+      "district": "North York"
+    },
+    {
+      "locationId": 642,
+      "name": "Gord and Irene Risk Community Recreation Centre",
+      "address": "2650 FINCH AVE W",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>Gord and Irene Risk Community Recreation Centre is located at the northeast corner of Islington Road and Finch Avenue. The centre offers diverse programming, including fitness, swimming and more.</p>",
+      "phone": "416-395-0355",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=642",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 643,
+      "name": "Goulding Community Recreation Centre",
+      "address": "45 GOULDING AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>Goulding Community Recreation Centre is located just south of Steeles Avenue on the west side of Yonge Street.</p>",
+      "phone": "416-395-0123",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=643",
+      "district": "North York"
+    },
+    {
+      "locationId": 664,
+      "name": "Irving W. Chapley Community Centre",
+      "address": "205 WILMINGTON AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool (summer) or the outdoor rink (winter).<br><br><strong>Leisure Skate inquiries:</strong> 416-395-7880<br>\n<strong>Room Rental inquiries:</strong> 416-395-0475<br>\n<strong>Pool:</strong> 416-395-6697<br>\n<strong>Ice Rental Permits:</strong> 416-395-6025<br><br>\n\nIrving W Chapley Community Centre offers programs for various age groups. Space is used by various community groups as well as some city implemented fitness, chess & keyboard programs. This facility is surrounded by a wonderful outdoor green space that is enhanced by tennis courts, basketball courts, ball hockey courts, bocce courts, a softball diamond, playground and plenty of open grass space.",
+      "phone": "416-395-0475",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=664",
+      "district": "North York"
+    },
+    {
+      "locationId": 675,
+      "name": "Lawrence Heights Community Centre",
+      "address": "5 REPLIN RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "Check the Drop-in Programs section for hours for the outdoor pool.</p>\n<p>Lawrence Heights Community Centre is located directly across from the Lawrence West Subway Station. Programs are offered for all ages.</p>\n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>. </p>\n<p>This centre has a dedicated <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/youth-recreation/\">enhanced youth space</a>.</p>\n<p>This is an <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/camps-after-school/after-school-recreation-care/\">After-School Recreation Care (ARC) location</a>. </p>",
+      "phone": "416-395-6118",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=675",
+      "district": "North York"
+    },
+    {
+      "locationId": 678,
+      "name": "Ledbury Park",
+      "address": "160 Ledbury St",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool (summer) or the outdoor rink (winter).<br><br>This 1.6 hectare park near Bathurst Street and Lawrence Avenue West features an artificial ice rink and an outdoor pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=678",
+      "district": "North York"
+    },
+    {
+      "locationId": 690,
+      "name": "Knob Hill Park",
+      "address": "625 Brimley Rd",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool.<br><br>A 13.5-hectare park on Brimley Road near Danforth Road that features a naturalized ravine with walking trails along West Highland Creek.\n\n<br><br>Knob Hill Outdoor Pool is located within Knob Hill Park. A wading pool is located within walking distance of the pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=690",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 693,
+      "name": "Mitchell Field Community Centre",
+      "address": "89 CHURCH AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>Mitchell Field is a multi-use facility with an indoor arena and outdoor pool. </p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=693",
+      "district": "North York"
+    },
+    {
+      "locationId": 703,
+      "name": "Northwood Community Centre",
+      "address": "15 CLUBHOUSE CRT",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>Northwood Community Centre is located in the Jane and Sheppard area and is a popular site for meetings, banquets and recreation programs.</p>\n<p>This centre has a dedicated <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/youth-recreation/\">enhanced youth space</a>.</p>",
+      "phone": "416-395-7876",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=703",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 704,
+      "name": "Maryvale Park",
+      "address": "5 Trestleside Grv",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>Maryvale Park is a 3.3-hectare park near Pharmacy Road and Ellesmere Road.</p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=704",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 714,
+      "name": "Oriole Community Recreation Centre",
+      "address": "2975 DON MILLS RD W",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>Oriole Community Recreation Centre features a full-size gymnasium, four multi-purpose rooms, a preschool room, a teaching kitchen, a weight room and a dance studio. The centre is located just north of Fairview Mall. </p>\n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>.</p>\n<p>This location has some <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/youth-recreation/\">youth-specific programming</a>.</p>",
+      "phone": "416-395-6005",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=714",
+      "district": "North York"
+    },
+    {
+      "locationId": 718,
+      "name": "Parkway Forest Park",
+      "address": "80 Parkway Forest Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 2,
+      "accessibility": "None",
+      "description": "<p>Parkway Forest Park is a 5.2-hectare park near Don Mills Road and Sheppard Avenue East. There are two playgrounds in the park. One playground is located at the north end and the other at the south end.</p>\n<p>The <a href=\"https://www.toronto.ca/community-people/animals-pets/pets-in-the-city/dog-off-leash-areas/\">Dogs Off-Leash Area</a> is fenced, allows <a href=\"https://www.toronto.ca/services-payments/permits-licences-bylaws/commercial-dog-walker-permit/\">Commercial Dog Walkers</a>, and has a separate area for dogs weighing less than 9 kg.</p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=718",
+      "district": "North York"
+    },
+    {
+      "locationId": 732,
+      "name": "Pleasantview Community Centre",
+      "address": "545 VAN HORNE AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool.<br><br>Pleasantview Community Centre is a multipurpose facility in the Victoria Park Avenue and Finch Avenue East area. This facility offers programs for preschoolers, children, youth, adults and older adults. Rooms are available for groups to permit.",
+      "phone": "416-395-6006",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=732",
+      "district": "North York"
+    },
+    {
+      "locationId": 760,
+      "name": "Domenico DiLuca Community Recreation Centre",
+      "address": "25 STANLEY RD",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool.<br><br>\nA facility located in the Jane Street and Sheppard Avenue West area, Domenico DiLuca Community Recreation Centre offers a variety of recreational programming for everyone from preschool to older adults to enjoy.",
+      "phone": "416-395-6673",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=760",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 768,
+      "name": "Halbert Park",
+      "address": "24 Rockwood Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool.<br><br>A 2.1 hectare park near Kingston Road and McCowan Road that features a ball diamond, a multipurpose sports field, a spalsh pad, a children's playground and the Halbert Park Outdoor Pool.\n<br><br>\n\nH.A. Halbert Outdoor Pool is located within Halbert Park. A wading pool is located within walking distance of the pool. Our schedule features swimming lessons as well leisure swim and lane swim.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=768",
+      "district": "Scarborough"
+    },
+    {
+      "locationId": 773,
+      "name": "Wedgewood Park - Etobicoke",
+      "address": "15 Swan Ave",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor rink (winter).<br><br>A 1.2 hectare park near Martingrove Road and Burnhamthorpe Road featuring a tennis court and children's playground. Also located in the park is the Wedgewood Park Outdoor Ice Rink and the Wedgewood Outdoor Pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=773",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 780,
+      "name": "Oakdale Community Centre",
+      "address": "350 GRANDRAVINE DR",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "Fully Accessible",
+      "description": "<p>Oakdale Community Centre is located close to the intersection of Jane Street and Grandravine Community Centre. </p>\n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>.</p>\n<p>This location has some <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/youth-recreation/\">youth-specific programming</a>.</p>",
+      "phone": "416-395-0488",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=780",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 840,
+      "name": "Eringate Park",
+      "address": "100 Eringate Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "This 3.8 hectare park is located in the Renforth Road and Eglinton Avenue West neighbourhood. The park features three ball diamonds and a children's playground. The park is also home to the Eringate Outdoor Pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=840",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 843,
+      "name": "Gihon Spring Park",
+      "address": "75 Gihon Spring Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "This 3.5 hectare park near Martingrove Road and Steeles Avenue West features a ball diamond, basketball court, two lit tennis courts and a children's playground. The Gihon Springs Outdoor Pool is located at the north end of the park.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=843",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 847,
+      "name": "Lambton - Kingsway Park",
+      "address": "37 Marquis Ave",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>In 2025, the playground was updated as part of the <a href=\"https://www.toronto.ca/city-government/planning-development/construction-new-facilities/playground-enhancement-program/\">Playground Enhancement Program</a>.</p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=847",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 857,
+      "name": "Ourland Park",
+      "address": "18 Ourland Ave",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "This 3.4 hectare park near Evans Avenue and Islington Avenue features a lit ball diamond, multipurpose sport field, two lit tennis courts, two bocce courts, a basketball court and a children`s playground. Located within the park is the Ourland Community Centre and the Ourland Outdoor Pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=857",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 858,
+      "name": "Park Lawn Park",
+      "address": "330 Park Lawn Rd",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor pool.<br><br>This 3.1 hectare park on Park Lawn Road north of Berry Road in Etobicoke features a lit ball diamond, a multipurpose sports field, four lit tennis courts and a children's playground. Located within the park is the Park Lawn Rink and the Park Lawn Outdoor Pool. For inquiries about Park Lawn Outdoor Pool, please call (416)394-8491.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=858",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 859,
+      "name": "Pine Point Park",
+      "address": "4 Conan Rd",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>Pine Point Park is a 39 39-hectare park near Highway 401 and Islington Avenue that connects with the Humber River Recreational Trail. The park's wooded trails follow the banks of the Humber River and extend up to several surrounding neighbourhood streets. Additional amenities located in the park are the Pine Point Outdoor Pool and the Pine Point Arena.</p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=859",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 867,
+      "name": "Rotary Peace Park",
+      "address": "25 Eleventh St",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>Rotary Peace Park is a 2.8-hectare park near Lake Shore Boulevard West and Islington Avenue. A trail through the park ends at a point overlooking Lake Ontario. Located at the park is the New Toronto Lawn Bowling Club.</p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=867",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 869,
+      "name": "Smithfield Park",
+      "address": "173 Mount Olive Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "A 4.5 hectare park on Martin Grove Road north of Albion Road featuring a lit ball diamond, a volleyball court, a skateboard area and a children's playground. A tributary to the Humber River flows along the south boundary of the park and is followed by trails in the park. Located in the park is the Smithfield Park Outdoor Pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=869",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 873,
+      "name": "West Deane Park",
+      "address": "19 Sedgebrook Cres",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor rink (winter).<br><br>A 54.8 hectare park near Martin Grove Road and Rathburn Road follows the Mimico Creek ravine from Eglinton Avenue West south to Rathburn Road. Many paths connect to the surrounding neighbourhoods as the trail follows the Creek. The park features two ball diamonds including one with lights, four tennis courts, three children's playgrounds, allotment gardens and a picnic area. Also located in the park are the West Deane Outdoor Pool and the West Deane Artificial Ice Rink.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=873",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 876,
+      "name": "Westgrove Park",
+      "address": "15 Redgrave Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "Check the Drop-In Programs tab for hours for the outdoor rink (winter).<br><br>A 4 hectare park at Martin Grove Road and Redgrave Drive featuring a multipurpose sports field, three lit tennis courts and a children's playground. Located at the north end of the park is the Westgrove Outdoor Pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=876",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 877,
+      "name": "Silver Creek Park",
+      "address": "44 Strathdee Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "A 3.9 hectare park near Islington Avenue and Eglinton Avenue West featuring a ball diamond, a multipurpose sports field, three tennis courts and a children's playground. There is a parking lot located at the south west corner of the park beside the Richmond Gardens Outdoor Pool. The park was improved in 2023.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=877",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 939,
+      "name": "Amos Waites Park",
+      "address": "2441 Lake Shore Blvd W",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "A 1.4 hectare park on Lake Shore Boulevard at Mimco Avenue in Etobicoke featuring two children's playgrounds and the Amos Waites Outdoor Pool. The park also fronts onto Lake Ontario with a series of boardwalks, paths and beaches.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=939",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 963,
+      "name": "Flagstaff Park",
+      "address": "42 Mercury Rd",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "This 3.6 hectare park near Martin Grove Road and Rexdale Boulevard features a large area for recreation activities, three lit tennis courts, a children's playground and the Flagstaff Outdoor Pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=963",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 1007,
+      "name": "Fairhaven Park",
+      "address": "100 Golfwood Hts",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "A 3.2 hectare park near Islington Avenue and Dixon Road with lots of space for leisurely recreation featuring a wading pool, children's playground, a basketball court and the Fairhaven Park Outdoor Pool.",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1007",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 1093,
+      "name": "O'Connor Community Centre",
+      "address": "1386 VICTORIA PARK AVE",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>O'Connor Community Centre offers a wide variety of programs for all ages. This facility has a weight room, gymnasium and is fully accessible. Rooms are available for groups to book. Call the facility directly to book space.</p>\n<p>The outdoor swimming pool's phone number is 416-395-7957.</p>\n<p><a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/how-to-use-our-services/how-to-register-for-recreation-programs/free-lower-cost-recreation-options/?accordion=about-free-centres\">This is a free centre</a>.</p>\n<p>This centre has a dedicated <a href=\"https://www.toronto.ca/explore-enjoy/parks-recreation/program-activities/youth-recreation/\">enhanced youth space</a>.</p>",
+      "phone": "416-395-7957",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=1093",
+      "district": "Toronto and East York"
+    },
+    {
+      "locationId": 2006,
+      "name": "Westmount Park",
+      "address": "22 Arcade Dr",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=2006",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 2642,
+      "name": "Dennis Flynn Park",
+      "address": "370 The West Mall",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "<p>Dennis Flynn Park is 2.6 hectares. </p>",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=2642",
+      "district": "Etobicoke York"
+    },
+    {
+      "locationId": 2750,
+      "name": "Stanley Park South - Toronto",
+      "address": "700 Wellington St W",
+      "latitude": null,
+      "longitude": null,
+      "poolType": "Outdoor",
+      "tankCount": 1,
+      "accessibility": "None",
+      "description": "None",
+      "phone": "None",
+      "website": "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/location/?id=2750",
+      "district": "Toronto and East York"
+    }
+  ],
+  "phantomPools": [],
+  "swimTypeMappings": [
+    {
+      "seedType": "Lane Swim",
+      "torontoTypes": [
+        "Lane Swim"
+      ],
+      "recommendation": "Map to: Lane Swim"
+    },
+    {
+      "seedType": "Leisure Swim",
+      "torontoTypes": [
+        "Leisure Swim"
+      ],
+      "recommendation": "Map to: Leisure Swim"
+    },
+    {
+      "seedType": "Older Adult",
+      "torontoTypes": [
+        "Lane Swim: Older Adult",
+        "Leisure Swim: Older Adult"
+      ],
+      "recommendation": "Map to: Lane Swim: Older Adult, Leisure Swim: Older Adult"
+    },
+    {
+      "seedType": "Women Only",
+      "torontoTypes": [
+        "Leisure Swim (Women)",
+        "Lane Swim (Women)"
+      ],
+      "recommendation": "Map to: Leisure Swim (Women), Lane Swim (Women)"
+    },
+    {
+      "seedType": "Aquafit",
+      "torontoTypes": [
+        "Aquatic Fitness: Walking",
+        "Aquatic Fitness: Mind Body",
+        "Aquatic Fitness"
+      ],
+      "recommendation": "Map to: Aquatic Fitness: Walking, Aquatic Fitness: Mind Body, Aquatic Fitness"
+    },
+    {
+      "seedType": "Family",
+      "torontoTypes": [
+        "Leisure Swim: Family"
+      ],
+      "recommendation": "Map to: Leisure Swim: Family"
+    }
+  ],
+  "allTorontoSwimTypes": [
+    "Adapted Leisure Swim",
+    "Aquatic Fitness: Arthritis",
+    "Aquatic Fitness: Boot Camp",
+    "Aquatic Fitness: Circuit Training",
+    "Aquatic Fitness: Deep",
+    "Aquatic Fitness: Deep (Women)",
+    "Aquatic Fitness: Mind Body",
+    "Aquatic Fitness: Shallow",
+    "Aquatic Fitness: Shallow (Women)",
+    "Aquatic Fitness: Walking",
+    "Aquatic Fitness: Water Walking",
+    "Humber College Swim",
+    "Lane Swim",
+    "Lane Swim (Men)",
+    "Lane Swim (Women)",
+    "Lane Swim: Long Course (50m)",
+    "Lane Swim: Older Adult",
+    "Lane Swim: Quiet (No Music)",
+    "Lane Swim: Short Course (25m)",
+    "Leisure Swim",
+    "Leisure Swim (Men)",
+    "Leisure Swim (Women)",
+    "Leisure Swim - March Break",
+    "Leisure Swim: Adapted",
+    "Leisure Swim: Adult",
+    "Leisure Swim: Adult (Therapeutic Time)",
+    "Leisure Swim: Family",
+    "Leisure Swim: Older Adult",
+    "Leisure Swim: Open and Inclusive",
+    "Leisure Swim: Preschool",
+    "Leisure Swim: Preschool (Girls)",
+    "Leisure Swim: Youth",
+    "Level Up - Drop In Lessons (Youth)"
+  ]
+}
