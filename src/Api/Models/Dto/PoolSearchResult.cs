@@ -13,6 +13,7 @@ public class PoolSearchResult
     public bool IsAccessible { get; set; }
     public string? Phone { get; set; }
     public string? Website { get; set; }
+    public string? ImageUrl { get; set; }
     public double DistanceKm { get; set; }
     public double CompositeScore { get; set; }
     public ScoreBreakdown Scores { get; set; } = new();

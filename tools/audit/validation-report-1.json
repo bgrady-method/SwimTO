@@ -1,0 +1,1327 @@
+{
+  "metadata": {
+    "iteration": 1,
+    "timestamp": "2026-03-20T00:28:29.111879+00:00",
+    "ckanPoolCount": 122,
+    "dbPoolCount": 122,
+    "ckanScheduleCount": 5566,
+    "dbScheduleCount": 5566
+  },
+  "overallAccuracy": 64.75,
+  "poolsWithIssues": 47,
+  "poolsWithoutIssues": 75,
+  "issueSummary": {
+    "critical": 12,
+    "major": 52,
+    "minor": 0,
+    "info": 4
+  },
+  "issues": [
+    {
+      "poolLocationId": 31,
+      "poolName": "Alexandra Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4042555012948",
+      "actual": "-79.405463",
+      "details": "Longitude differs by 0.001207 degrees (~94 meters)",
+      "suggestedFix": "Update longitude to -79.4042555012948"
+    },
+    {
+      "poolLocationId": 48,
+      "poolName": "Hillcrest Community Centre",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6791928056708",
+      "actual": "43.7509884",
+      "details": "Latitude differs by 0.071796 degrees (~7969 meters) - likely wrong location",
+      "suggestedFix": "Update latitude to 43.6791928056708"
+    },
+    {
+      "poolLocationId": 48,
+      "poolName": "Hillcrest Community Centre",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4159949499324",
+      "actual": "-79.4373574",
+      "details": "Longitude differs by 0.021362 degrees (~1666 meters) - likely wrong location",
+      "suggestedFix": "Update longitude to -79.4159949499324"
+    },
+    {
+      "poolLocationId": 70,
+      "poolName": "Greenwood Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6688907552529",
+      "actual": "43.6726165",
+      "details": "Latitude differs by 0.003726 degrees (~414 meters)",
+      "suggestedFix": "Update latitude to 43.6688907552529"
+    },
+    {
+      "poolLocationId": 77,
+      "poolName": "High Park",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6468021271006",
+      "actual": "43.6620518",
+      "details": "Latitude differs by 0.015250 degrees (~1693 meters) - likely wrong location",
+      "suggestedFix": "Update latitude to 43.6468021271006"
+    },
+    {
+      "poolLocationId": 77,
+      "poolName": "High Park",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.462835365765",
+      "actual": "-79.4253972",
+      "details": "Longitude differs by 0.037438 degrees (~2920 meters) - likely wrong location",
+      "suggestedFix": "Update longitude to -79.462835365765"
+    },
+    {
+      "poolLocationId": 196,
+      "poolName": "Christie Pits Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6646698181675",
+      "actual": "43.6620518",
+      "details": "Latitude differs by 0.002618 degrees (~291 meters)",
+      "suggestedFix": "Update latitude to 43.6646698181675"
+    },
+    {
+      "poolLocationId": 196,
+      "poolName": "Christie Pits Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4207936079461",
+      "actual": "-79.4253972",
+      "details": "Longitude differs by 0.004604 degrees (~359 meters)",
+      "suggestedFix": "Update longitude to -79.4207936079461"
+    },
+    {
+      "poolLocationId": 267,
+      "poolName": "S.H. Armstrong Community Recreation Centre",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.3228166106666",
+      "actual": "-79.3215766",
+      "details": "Longitude differs by 0.001240 degrees (~97 meters)",
+      "suggestedFix": "Update longitude to -79.3228166106666"
+    },
+    {
+      "poolLocationId": 342,
+      "poolName": "Northview Heights Secondary School",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.7744465819947",
+      "actual": "43.7733696",
+      "details": "Latitude differs by 0.001077 degrees (~120 meters)",
+      "suggestedFix": "Update latitude to 43.7744465819947"
+    },
+    {
+      "poolLocationId": 343,
+      "poolName": "Riverdale Park East",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6700504650072",
+      "actual": "43.6590585",
+      "details": "Latitude differs by 0.010992 degrees (~1220 meters) - likely wrong location",
+      "suggestedFix": "Update latitude to 43.6700504650072"
+    },
+    {
+      "poolLocationId": 343,
+      "poolName": "Riverdale Park East",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.3557408645383",
+      "actual": "-79.3499098",
+      "details": "Longitude differs by 0.005831 degrees (~455 meters)",
+      "suggestedFix": "Update longitude to -79.3557408645383"
+    },
+    {
+      "poolLocationId": 352,
+      "poolName": "Kidstown - Water Park",
+      "severity": "info",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "GeoJSON",
+      "expected": "GeoJSON record",
+      "actual": "Missing",
+      "details": "No GeoJSON record in CKAN for location 352 - cannot validate coordinates",
+      "suggestedFix": "Coordinates cannot be cross-referenced with CKAN GeoJSON"
+    },
+    {
+      "poolLocationId": 357,
+      "poolName": "Humber Community Pool",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.7305517812869",
+      "actual": "43.7283659",
+      "details": "Latitude differs by 0.002186 degrees (~243 meters)",
+      "suggestedFix": "Update latitude to 43.7305517812869"
+    },
+    {
+      "poolLocationId": 421,
+      "poolName": "Stan Wadlow Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.3140535784306",
+      "actual": "-79.3153159",
+      "details": "Longitude differs by 0.001262 degrees (~98 meters)",
+      "suggestedFix": "Update longitude to -79.3140535784306"
+    },
+    {
+      "poolLocationId": 433,
+      "poolName": "Sunnyside Gus Ryder Outdoor Pool",
+      "severity": "info",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "GeoJSON",
+      "expected": "GeoJSON record",
+      "actual": "Missing",
+      "details": "No GeoJSON record in CKAN for location 433 - cannot validate coordinates",
+      "suggestedFix": "Coordinates cannot be cross-referenced with CKAN GeoJSON"
+    },
+    {
+      "poolLocationId": 437,
+      "poolName": "Donald D. Summerville Olympic Pools",
+      "severity": "info",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "GeoJSON",
+      "expected": "GeoJSON record",
+      "actual": "Missing",
+      "details": "No GeoJSON record in CKAN for location 437 - cannot validate coordinates",
+      "suggestedFix": "Coordinates cannot be cross-referenced with CKAN GeoJSON"
+    },
+    {
+      "poolLocationId": 504,
+      "poolName": "Smythe Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6745950041596",
+      "actual": "43.6762227",
+      "details": "Latitude differs by 0.001628 degrees (~181 meters)",
+      "suggestedFix": "Update latitude to 43.6745950041596"
+    },
+    {
+      "poolLocationId": 507,
+      "poolName": "Birchmount Community Centre",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.2621805292273",
+      "actual": "-79.2632036",
+      "details": "Longitude differs by 0.001023 degrees (~80 meters)",
+      "suggestedFix": "Update longitude to -79.2621805292273"
+    },
+    {
+      "poolLocationId": 514,
+      "poolName": "Earlscourt Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6736233946801",
+      "actual": "43.6719926",
+      "details": "Latitude differs by 0.001631 degrees (~181 meters)",
+      "suggestedFix": "Update latitude to 43.6736233946801"
+    },
+    {
+      "poolLocationId": 514,
+      "poolName": "Earlscourt Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4515037424062",
+      "actual": "-79.4492153",
+      "details": "Longitude differs by 0.002288 degrees (~178 meters)",
+      "suggestedFix": "Update longitude to -79.4515037424062"
+    },
+    {
+      "poolLocationId": 537,
+      "poolName": "Centennial Recreation Centre - Scarborough",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.7745337693776",
+      "actual": "43.7755592",
+      "details": "Latitude differs by 0.001025 degrees (~114 meters)",
+      "suggestedFix": "Update latitude to 43.7745337693776"
+    },
+    {
+      "poolLocationId": 537,
+      "poolName": "Centennial Recreation Centre - Scarborough",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.2370287071057",
+      "actual": "-79.2351695",
+      "details": "Longitude differs by 0.001859 degrees (~145 meters)",
+      "suggestedFix": "Update longitude to -79.2370287071057"
+    },
+    {
+      "poolLocationId": 542,
+      "poolName": "Leaside Gardens Indoor Pool",
+      "severity": "info",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "GeoJSON",
+      "expected": "GeoJSON record",
+      "actual": "Missing",
+      "details": "No GeoJSON record in CKAN for location 542 - cannot validate coordinates",
+      "suggestedFix": "Coordinates cannot be cross-referenced with CKAN GeoJSON"
+    },
+    {
+      "poolLocationId": 557,
+      "poolName": "Blantyre Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6830542875333",
+      "actual": "43.6844914",
+      "details": "Latitude differs by 0.001437 degrees (~160 meters)",
+      "suggestedFix": "Update latitude to 43.6830542875333"
+    },
+    {
+      "poolLocationId": 647,
+      "poolName": "Grandravine Community Recreation Centre",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4906515064637",
+      "actual": "-79.4896362",
+      "details": "Longitude differs by 0.001015 degrees (~79 meters)",
+      "suggestedFix": "Update longitude to -79.4906515064637"
+    },
+    {
+      "poolLocationId": 678,
+      "poolName": "Ledbury Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.7273960080346",
+      "actual": "43.7211883",
+      "details": "Latitude differs by 0.006208 degrees (~689 meters)",
+      "suggestedFix": "Update latitude to 43.7273960080346"
+    },
+    {
+      "poolLocationId": 678,
+      "poolName": "Ledbury Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4251589559548",
+      "actual": "-79.4225892",
+      "details": "Longitude differs by 0.002570 degrees (~200 meters)",
+      "suggestedFix": "Update longitude to -79.4251589559548"
+    },
+    {
+      "poolLocationId": 704,
+      "poolName": "Maryvale Park",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.7530814433334",
+      "actual": "0.0",
+      "details": "Latitude is zero in DB (CKAN has 43.7530814433334)",
+      "suggestedFix": "Set latitude to 43.7530814433334"
+    },
+    {
+      "poolLocationId": 704,
+      "poolName": "Maryvale Park",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.3065285038638",
+      "actual": "0.0",
+      "details": "Longitude is zero in DB (CKAN has -79.3065285038638)",
+      "suggestedFix": "Set longitude to -79.3065285038638"
+    },
+    {
+      "poolLocationId": 714,
+      "poolName": "Oriole Community Recreation Centre",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.7817608699887",
+      "actual": "43.783906",
+      "details": "Latitude differs by 0.002145 degrees (~238 meters)",
+      "suggestedFix": "Update latitude to 43.7817608699887"
+    },
+    {
+      "poolLocationId": 714,
+      "poolName": "Oriole Community Recreation Centre",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.3514094239262",
+      "actual": "-79.3526845",
+      "details": "Longitude differs by 0.001275 degrees (~99 meters)",
+      "suggestedFix": "Update longitude to -79.3514094239262"
+    },
+    {
+      "poolLocationId": 718,
+      "poolName": "Parkway Forest Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.3422030461915",
+      "actual": "-79.3409333",
+      "details": "Longitude differs by 0.001270 degrees (~99 meters)",
+      "suggestedFix": "Update longitude to -79.3422030461915"
+    },
+    {
+      "poolLocationId": 768,
+      "poolName": "Halbert Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.2313080790699",
+      "actual": "-79.2298537",
+      "details": "Longitude differs by 0.001454 degrees (~113 meters)",
+      "suggestedFix": "Update longitude to -79.2313080790699"
+    },
+    {
+      "poolLocationId": 773,
+      "poolName": "Wedgewood Park - Etobicoke",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6444634725439",
+      "actual": "43.6456477",
+      "details": "Latitude differs by 0.001184 degrees (~131 meters)",
+      "suggestedFix": "Update latitude to 43.6444634725439"
+    },
+    {
+      "poolLocationId": 780,
+      "poolName": "Oakdale Community Centre",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.5131274475855",
+      "actual": "-79.5149224",
+      "details": "Longitude differs by 0.001795 degrees (~140 meters)",
+      "suggestedFix": "Update longitude to -79.5131274475855"
+    },
+    {
+      "poolLocationId": 840,
+      "poolName": "Eringate Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6626271193157",
+      "actual": "43.6637043",
+      "details": "Latitude differs by 0.001077 degrees (~120 meters)",
+      "suggestedFix": "Update latitude to 43.6626271193157"
+    },
+    {
+      "poolLocationId": 840,
+      "poolName": "Eringate Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.5808998991253",
+      "actual": "-79.5820453",
+      "details": "Longitude differs by 0.001145 degrees (~89 meters)",
+      "suggestedFix": "Update longitude to -79.5808998991253"
+    },
+    {
+      "poolLocationId": 843,
+      "poolName": "Gihon Spring Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.5946310987278",
+      "actual": "-79.5976058",
+      "details": "Longitude differs by 0.002975 degrees (~232 meters)",
+      "suggestedFix": "Update longitude to -79.5946310987278"
+    },
+    {
+      "poolLocationId": 847,
+      "poolName": "Lambton - Kingsway Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.5078062966722",
+      "actual": "-79.5091261",
+      "details": "Longitude differs by 0.001320 degrees (~103 meters)",
+      "suggestedFix": "Update longitude to -79.5078062966722"
+    },
+    {
+      "poolLocationId": 857,
+      "poolName": "Ourland Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6155517022453",
+      "actual": "43.6143867",
+      "details": "Latitude differs by 0.001165 degrees (~129 meters)",
+      "suggestedFix": "Update latitude to 43.6155517022453"
+    },
+    {
+      "poolLocationId": 857,
+      "poolName": "Ourland Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.5086950991317",
+      "actual": "-79.5073989",
+      "details": "Longitude differs by 0.001296 degrees (~101 meters)",
+      "suggestedFix": "Update longitude to -79.5086950991317"
+    },
+    {
+      "poolLocationId": 858,
+      "poolName": "Park Lawn Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6379464913778",
+      "actual": "43.6319191",
+      "details": "Latitude differs by 0.006027 degrees (~669 meters)",
+      "suggestedFix": "Update latitude to 43.6379464913778"
+    },
+    {
+      "poolLocationId": 858,
+      "poolName": "Park Lawn Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4951405382046",
+      "actual": "-79.4915971",
+      "details": "Longitude differs by 0.003543 degrees (~276 meters)",
+      "suggestedFix": "Update longitude to -79.4951405382046"
+    },
+    {
+      "poolLocationId": 859,
+      "poolName": "Pine Point Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.716158575835",
+      "actual": "43.7120853",
+      "details": "Latitude differs by 0.004073 degrees (~452 meters)",
+      "suggestedFix": "Update latitude to 43.716158575835"
+    },
+    {
+      "poolLocationId": 859,
+      "poolName": "Pine Point Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.5441307197754",
+      "actual": "-79.5489429",
+      "details": "Longitude differs by 0.004812 degrees (~375 meters)",
+      "suggestedFix": "Update longitude to -79.5441307197754"
+    },
+    {
+      "poolLocationId": 867,
+      "poolName": "Rotary Peace Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.5947627654434",
+      "actual": "43.598433",
+      "details": "Latitude differs by 0.003670 degrees (~407 meters)",
+      "suggestedFix": "Update latitude to 43.5947627654434"
+    },
+    {
+      "poolLocationId": 867,
+      "poolName": "Rotary Peace Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.5068692870492",
+      "actual": "-79.509145",
+      "details": "Longitude differs by 0.002276 degrees (~178 meters)",
+      "suggestedFix": "Update longitude to -79.5068692870492"
+    },
+    {
+      "poolLocationId": 873,
+      "poolName": "West Deane Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6639989620464",
+      "actual": "43.6600253",
+      "details": "Latitude differs by 0.003974 degrees (~441 meters)",
+      "suggestedFix": "Update latitude to 43.6639989620464"
+    },
+    {
+      "poolLocationId": 876,
+      "poolName": "Westgrove Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6818208069823",
+      "actual": "43.6829128",
+      "details": "Latitude differs by 0.001092 degrees (~121 meters)",
+      "suggestedFix": "Update latitude to 43.6818208069823"
+    },
+    {
+      "poolLocationId": 877,
+      "poolName": "Silver Creek Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6827011188454",
+      "actual": "43.6816832",
+      "details": "Latitude differs by 0.001018 degrees (~113 meters)",
+      "suggestedFix": "Update latitude to 43.6827011188454"
+    },
+    {
+      "poolLocationId": 877,
+      "poolName": "Silver Creek Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.5434038311754",
+      "actual": "-79.5457054",
+      "details": "Longitude differs by 0.002302 degrees (~180 meters)",
+      "suggestedFix": "Update longitude to -79.5434038311754"
+    },
+    {
+      "poolLocationId": 891,
+      "poolName": "Memorial Pool and Health Club",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6483790866303",
+      "actual": "43.6495038",
+      "details": "Latitude differs by 0.001125 degrees (~125 meters)",
+      "suggestedFix": "Update latitude to 43.6483790866303"
+    },
+    {
+      "poolLocationId": 939,
+      "poolName": "Amos Waites Park",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6133543704603",
+      "actual": "43.6354421",
+      "details": "Latitude differs by 0.022088 degrees (~2452 meters) - likely wrong location",
+      "suggestedFix": "Update latitude to 43.6133543704603"
+    },
+    {
+      "poolLocationId": 939,
+      "poolName": "Amos Waites Park",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4883233106039",
+      "actual": "-79.4071473",
+      "details": "Longitude differs by 0.081176 degrees (~6332 meters) - likely wrong location",
+      "suggestedFix": "Update longitude to -79.4883233106039"
+    },
+    {
+      "poolLocationId": 963,
+      "poolName": "Flagstaff Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.5906395390043",
+      "actual": "-79.5921243",
+      "details": "Longitude differs by 0.001485 degrees (~116 meters)",
+      "suggestedFix": "Update longitude to -79.5906395390043"
+    },
+    {
+      "poolLocationId": 1200,
+      "poolName": "Georges Vanier Secondary School",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.3510697345443",
+      "actual": "-79.3492975",
+      "details": "Longitude differs by 0.001772 degrees (~138 meters)",
+      "suggestedFix": "Update longitude to -79.3510697345443"
+    },
+    {
+      "poolLocationId": 1315,
+      "poolName": "Sir Oliver Mowat Collegiate Institute",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.1421971267261",
+      "actual": "-79.1432535",
+      "details": "Longitude differs by 0.001056 degrees (~82 meters)",
+      "suggestedFix": "Update longitude to -79.1421971267261"
+    },
+    {
+      "poolLocationId": 1399,
+      "poolName": "York Mills Collegiate Institute",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.7515401318856",
+      "actual": "43.7504187",
+      "details": "Latitude differs by 0.001121 degrees (~124 meters)",
+      "suggestedFix": "Update latitude to 43.7515401318856"
+    },
+    {
+      "poolLocationId": 1399,
+      "poolName": "York Mills Collegiate Institute",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.3736353184928",
+      "actual": "-79.3760597",
+      "details": "Longitude differs by 0.002424 degrees (~189 meters)",
+      "suggestedFix": "Update longitude to -79.3736353184928"
+    },
+    {
+      "poolLocationId": 2006,
+      "poolName": "Westmount Park",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6873056609434",
+      "actual": "43.6884255",
+      "details": "Latitude differs by 0.001120 degrees (~124 meters)",
+      "suggestedFix": "Update latitude to 43.6873056609434"
+    },
+    {
+      "poolLocationId": 2750,
+      "poolName": "Stanley Park South - Toronto",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.6419107696079",
+      "actual": "43.6435806",
+      "details": "Latitude differs by 0.001670 degrees (~185 meters)",
+      "suggestedFix": "Update latitude to 43.6419107696079"
+    },
+    {
+      "poolLocationId": 2750,
+      "poolName": "Stanley Park South - Toronto",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4089348232241",
+      "actual": "-79.3966279",
+      "details": "Longitude differs by 0.012307 degrees (~960 meters) - likely wrong location",
+      "suggestedFix": "Update longitude to -79.4089348232241"
+    },
+    {
+      "poolLocationId": 3501,
+      "poolName": "York Recreation Centre",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.687872905789",
+      "actual": "43.7057062",
+      "details": "Latitude differs by 0.017833 degrees (~1979 meters) - likely wrong location",
+      "suggestedFix": "Update latitude to 43.687872905789"
+    },
+    {
+      "poolLocationId": 3501,
+      "poolName": "York Recreation Centre",
+      "severity": "critical",
+      "category": "attribute",
+      "checkId": "P-05",
+      "field": "Longitude",
+      "expected": "-79.4820344136735",
+      "actual": "-79.4950452",
+      "details": "Longitude differs by 0.013011 degrees (~1015 meters) - likely wrong location",
+      "suggestedFix": "Update longitude to -79.4820344136735"
+    },
+    {
+      "poolLocationId": 3858,
+      "poolName": "Rouge Valley Community Recreation Centre",
+      "severity": "major",
+      "category": "attribute",
+      "checkId": "P-04",
+      "field": "Latitude",
+      "expected": "43.805385464592",
+      "actual": "43.8042937",
+      "details": "Latitude differs by 0.001092 degrees (~121 meters)",
+      "suggestedFix": "Update latitude to 43.805385464592"
+    },
+    {
+      "poolLocationId": 77,
+      "poolName": "High Park",
+      "severity": "major",
+      "category": "global",
+      "checkId": "G-04",
+      "field": "DuplicateCoordinates",
+      "expected": "Unique coordinates per pool",
+      "actual": "(43.6620518, -79.4253972)",
+      "details": "Duplicate coordinates shared with: High Park (lid=77, addr=1873 Bloor St W), Christie Pits Park (lid=196, addr=750 Bloor St W)",
+      "suggestedFix": "Look up correct coordinates for each pool separately"
+    },
+    {
+      "poolLocationId": 196,
+      "poolName": "Christie Pits Park",
+      "severity": "major",
+      "category": "global",
+      "checkId": "G-04",
+      "field": "DuplicateCoordinates",
+      "expected": "Unique coordinates per pool",
+      "actual": "(43.6620518, -79.4253972)",
+      "details": "Duplicate coordinates shared with: High Park (lid=77, addr=1873 Bloor St W), Christie Pits Park (lid=196, addr=750 Bloor St W)",
+      "suggestedFix": "Look up correct coordinates for each pool separately"
+    }
+  ],
+  "poolStatusMap": {
+    "7": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "17": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "24": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "27": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "31": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "36": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "39": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "42": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "45": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "48": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "58": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "63": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "70": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "77": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "85": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "100": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "145": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "189": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "196": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "234": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "243": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "267": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "272": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "282": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "287": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "294": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "308": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "329": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "342": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "343": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "352": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "357": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "421": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "425": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "433": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "437": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "451": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "480": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "499": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "502": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "504": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "506": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "507": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "508": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "509": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "510": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "514": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "523": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "537": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "542": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "557": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "567": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "575": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "633": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "638": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "642": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "643": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "647": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "664": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "675": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "678": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "690": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "693": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "703": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "704": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "714": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "718": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "732": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "744": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "760": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "768": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "773": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "780": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "795": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "797": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "840": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "843": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "847": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "857": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "858": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "859": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "867": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "869": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "873": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "876": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "877": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "891": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "892": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "893": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "896": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "897": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "939": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "963": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "1007": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1056": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1093": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1098": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1110": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1143": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1163": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1164": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1186": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1200": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "1205": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1250": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1255": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1315": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "1371": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1373": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1381": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1384": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1387": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1399": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "2006": {
+      "status": "fail",
+      "issueCount": 1
+    },
+    "2012": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "2642": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "2750": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "2773": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "3501": {
+      "status": "fail",
+      "issueCount": 2
+    },
+    "3732": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "3775": {
+      "status": "pass",
+      "issueCount": 0
+    },
+    "3858": {
+      "status": "fail",
+      "issueCount": 1
+    }
+  }
+}

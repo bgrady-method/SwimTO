@@ -38,6 +38,7 @@ public static class PoolEndpoints
                 pool.IsAccessible,
                 pool.Phone,
                 pool.Website,
+                pool.ImageUrl,
             });
         });
 

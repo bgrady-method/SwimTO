@@ -123,8 +123,8 @@ public static class CkanRecordExtensions
         {
             if (record.TryGetValue(key, out var val) && val.ValueKind == JsonValueKind.String)
             {
-                var s = val.GetString();
-                if (!string.IsNullOrEmpty(s)) return s;
+                var s = val.GetString()?.Trim();
+                if (!string.IsNullOrEmpty(s) && !s.Equals("None", StringComparison.OrdinalIgnoreCase)) return s;
             }
         }
         return "";

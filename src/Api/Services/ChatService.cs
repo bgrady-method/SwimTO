@@ -209,6 +209,8 @@ public class ChatService(
                                 item.TryGetProperty("LengthMeters", out var plen);
                                 item.TryGetProperty("LaneCount", out var planes);
                                 item.TryGetProperty("DistanceKm", out var pdist);
+                                item.TryGetProperty("Website", out var pweb);
+                                item.TryGetProperty("ImageUrl", out var pimg);
                                 poolReferences.Add(new
                                 {
                                     poolId = pid.GetInt32(),
@@ -220,6 +222,8 @@ public class ChatService(
                                     lengthMeters = plen.ValueKind == JsonValueKind.Number ? plen.GetDouble() : (double?)null,
                                     laneCount = planes.ValueKind == JsonValueKind.Number ? planes.GetInt32() : (int?)null,
                                     distanceKm = pdist.ValueKind == JsonValueKind.Number ? pdist.GetDouble() : (double?)null,
+                                    website = pweb.ValueKind == JsonValueKind.String ? pweb.GetString() : null,
+                                    imageUrl = pimg.ValueKind == JsonValueKind.String ? pimg.GetString() : null,
                                 });
                             }
                         }

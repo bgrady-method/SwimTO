@@ -1,8 +1,28 @@
-import { useCallback } from 'react';
+import { useCallback, useRef } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import { useChatStore } from '@/stores/useChatStore';
 import { useMapStore } from '@/stores/useMapStore';
 import { useFilterStore } from '@/stores/useFilterStore';
+import { detectOfflineAI, createOfflineAISession } from '@/lib/offline-ai';
 import type { PoolReference } from '@/types/chat';
+import type { PoolSearchResult, PoolSearchResponse } from '@/types/pool';
+import type { OfflineAIProvider } from '@/lib/offline-ai';
+
+/** Extract cached pool results from React Query cache */
+function getCachedPools(queryClient: ReturnType<typeof useQueryClient>): PoolSearchResult[] {
+  const cache = queryClient.getQueryCache().getAll();
+  for (const query of cache) {
+    if (
+      Array.isArray(query.queryKey) &&
+      query.queryKey[0] === 'poolSearch' &&
+      query.state.data
+    ) {
+      const data = query.state.data as PoolSearchResponse;
+      if (data.results?.length) return data.results;
+    }
+  }
+  return [];
+}
 
 export function useChatStream() {
   const {
@@ -15,6 +35,63 @@ export function useChatStream() {
     setStreaming,
   } = useChatStore();
   const { userLocation, setHighlightedPools } = useMapStore();
+  const queryClient = useQueryClient();
+
+  // Keep a ref to the offline session to reuse / destroy
+  const offlineSessionRef = useRef<{ prompt(msg: string): AsyncGenerator<string>; destroy(): void } | null>(null);
+  const offlineProviderRef = useRef<OfflineAIProvider | null>(null);
+
+  const handleOffline = useCallback(
+    async (message: string, assistantId: string) => {
+      const cachedPools = getCachedPools(queryClient);
+
+      // Try providers in order, falling back on failure
+      const providers: OfflineAIProvider[] = [];
+
+      if (!offlineSessionRef.current) {
+        const detected = await detectOfflineAI();
+        providers.push(detected);
+        if (detected !== 'keyword-fallback') providers.push('keyword-fallback');
+      }
+
+      // If we already have a session, use it directly
+      if (offlineSessionRef.current) {
+        try {
+          appendToAssistant(assistantId, '*_Offline mode_* — ');
+          for await (const chunk of offlineSessionRef.current.prompt(message)) {
+            appendToAssistant(assistantId, chunk);
+          }
+          return;
+        } catch {
+          offlineSessionRef.current?.destroy();
+          offlineSessionRef.current = null;
+          providers.length = 0;
+          providers.push('keyword-fallback');
+        }
+      }
+
+      // Try each provider in the fallback chain
+      for (const provider of providers) {
+        try {
+          offlineProviderRef.current = provider;
+          offlineSessionRef.current = await createOfflineAISession(provider, cachedPools);
+
+          appendToAssistant(assistantId, '*_Offline mode_* — ');
+          for await (const chunk of offlineSessionRef.current.prompt(message)) {
+            appendToAssistant(assistantId, chunk);
+          }
+          return;
+        } catch {
+          offlineSessionRef.current?.destroy();
+          offlineSessionRef.current = null;
+        }
+      }
+
+      // All providers failed
+      appendToAssistant(assistantId, "*_Offline mode_* — I'm currently offline and can't generate a response. Try the **Explore** tab to browse cached pool data.");
+    },
+    [appendToAssistant, queryClient]
+  );
 
   const sendMessage = useCallback(
     async (message: string) => {
@@ -23,6 +100,14 @@ export function useChatStream() {
       addUserMessage(message);
       setStreaming(true);
       const assistantId = startAssistantMessage();
+
+      // Check if offline
+      if (!navigator.onLine) {
+        await handleOffline(message, assistantId);
+        finalizeAssistant(assistantId);
+        setStreaming(false);
+        return;
+      }
 
       try {
         const response = await fetch('/api/chat', {
@@ -54,9 +139,7 @@ export function useChatStream() {
 
           buffer += decoder.decode(value, { stream: true });
 
-          // SSE messages are separated by double newlines
           const messages = buffer.split('\n\n');
-          // Last element may be incomplete — keep it in the buffer
           buffer = messages.pop() || '';
 
           for (const msg of messages) {
@@ -76,7 +159,6 @@ export function useChatStream() {
 
             switch (eventType) {
               case 'text':
-                // Add separator when text resumes after a tool call
                 if (hadToolCall && hasContent) {
                   appendToAssistant(assistantId, '\n\n');
                   hadToolCall = false;
@@ -88,7 +170,6 @@ export function useChatStream() {
                 hadToolCall = true;
                 break;
               case 'tool_result':
-                // tool result received, next text will be the final answer
                 break;
               case 'applied_filters':
                 try {
@@ -118,8 +199,9 @@ export function useChatStream() {
         }
 
         finalizeAssistant(assistantId, poolRefs.length > 0 ? poolRefs : undefined);
-      } catch (error) {
-        appendToAssistant(assistantId, '\n\n*Error: Could not connect to the chat service.*');
+      } catch {
+        // Network error — try offline fallback
+        await handleOffline(message, assistantId);
         finalizeAssistant(assistantId);
       } finally {
         setStreaming(false);
@@ -135,6 +217,7 @@ export function useChatStream() {
       finalizeAssistant,
       setStreaming,
       setHighlightedPools,
+      handleOffline,
     ]
   );
 

@@ -46,6 +46,7 @@ public class ChatToolExecutor(PoolSearchService searchService, IServiceProvider 
             r.CompositeScore,
             r.Latitude,
             r.Longitude,
+            r.Website,
             NextSessions = r.MatchingSchedules.Take(5),
         });
 

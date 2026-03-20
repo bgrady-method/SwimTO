@@ -8,6 +8,8 @@ interface FilterState {
   timeTo: string;
   location: LocationFilter | null;
   attributes: AttributeFilter;
+  searchQuery: string;
+  showFavoritesOnly: boolean;
   setSwimTypes: (types: string[]) => void;
   toggleSwimType: (type: string) => void;
   setDaysOfWeek: (days: number[]) => void;
@@ -15,6 +17,8 @@ interface FilterState {
   setTimeRange: (from: string, to: string) => void;
   setLocation: (location: LocationFilter | null) => void;
   setAttributes: (attrs: Partial<AttributeFilter>) => void;
+  setSearchQuery: (query: string) => void;
+  toggleShowFavoritesOnly: () => void;
   resetFilters: () => void;
 }
 
@@ -25,6 +29,8 @@ const initialState = {
   timeTo: '22:00',
   location: null as LocationFilter | null,
   attributes: { poolType: null, minLength: null, minLanes: null } as AttributeFilter,
+  searchQuery: '',
+  showFavoritesOnly: false,
 };
 
 export const useFilterStore = create<FilterState>((set) => ({
@@ -47,5 +53,8 @@ export const useFilterStore = create<FilterState>((set) => ({
   setLocation: (location) => set({ location }),
   setAttributes: (attrs) =>
     set((s) => ({ attributes: { ...s.attributes, ...attrs } })),
+  setSearchQuery: (query) => set({ searchQuery: query }),
+  toggleShowFavoritesOnly: () =>
+    set((s) => ({ showFavoritesOnly: !s.showFavoritesOnly })),
   resetFilters: () => set(initialState),
 }));

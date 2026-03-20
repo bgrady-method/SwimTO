@@ -28,7 +28,7 @@ function toPoolSearchResult(ref: PoolReference): PoolSearchResult {
     laneCount: ref.laneCount ?? null,
     isAccessible: false,
     phone: null,
-    website: null,
+    website: ref.website ?? null,
     distanceKm: ref.distanceKm ?? 0,
     compositeScore: 0.85,
     scores: { proximity: 0, poolLength: 0, laneCount: 0, scheduleConvenience: 0 },

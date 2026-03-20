@@ -10,6 +10,7 @@ export interface Pool {
   isAccessible: boolean;
   phone: string | null;
   website: string | null;
+  imageUrl?: string | null;
 }
 
 export interface ScheduleResult {

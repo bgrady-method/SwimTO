@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { ChevronDown, RotateCcw } from 'lucide-react';
+import { ChevronDown, Heart, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Input } from '@/components/ui/input';
@@ -13,10 +13,15 @@ import { SWIM_TYPES, DAY_NAMES } from '@/types/pool';
 export function FilterPanel() {
   const {
     swimTypes, daysOfWeek, timeFrom, timeTo, location, attributes,
-    toggleSwimType, toggleDay, setTimeRange, setLocation, setAttributes, resetFilters,
+    showFavoritesOnly,
+    toggleSwimType, toggleDay, setTimeRange, setLocation, setAttributes,
+    toggleShowFavoritesOnly, resetFilters,
   } = useFilterStore();
 
-  const { facets } = usePoolSearch();
+  const { facets, results } = usePoolSearch();
+
+  const poolsWithLength = results.filter((r) => r.lengthMeters != null).length;
+  const totalPools = results.length;
 
   const [locationInput, setLocationInput] = useState('');
   const [sections, setSections] = useState({ swimType: true, time: true, location: true, pool: false });
@@ -47,6 +52,20 @@ export function FilterPanel() {
           <RotateCcw className="h-3 w-3 mr-1" /> Reset
         </Button>
       </div>
+
+      {/* Favorites only */}
+      <button
+        onClick={toggleShowFavoritesOnly}
+        className={cn(
+          'w-full flex items-center gap-2 px-3 py-2.5 min-h-[44px] rounded-lg border text-sm font-medium transition-colors active:opacity-80',
+          showFavoritesOnly
+            ? 'bg-rose-50 text-rose-700 border-rose-300 dark:bg-rose-950 dark:text-rose-300 dark:border-rose-700'
+            : 'bg-background border-border text-muted-foreground hover:border-rose-300'
+        )}
+      >
+        <Heart className={cn('h-4 w-4', showFavoritesOnly ? 'fill-rose-500 text-rose-500' : '')} />
+        Favorites only
+      </button>
 
       {/* Swim Type */}
       <CollapsibleSection title="Swim Type" open={sections.swimType} onToggle={() => toggleSection('swimType')}>
@@ -184,7 +203,7 @@ export function FilterPanel() {
           </div>
           <div className="space-y-1">
             <div className="flex justify-between text-xs text-muted-foreground">
-              <span>Min pool length</span>
+              <span>Min pool length{totalPools > 0 && ` (${poolsWithLength}/${totalPools} have data)`}</span>
               <span className="font-mono">{attributes.minLength ?? 0}m</span>
             </div>
             <Slider

@@ -1,0 +1,645 @@
+{
+  "metadata": {
+    "iteration": 2,
+    "timestamp": "2026-03-20T00:40:16.322093+00:00",
+    "ckanPoolCount": 122,
+    "dbPoolCount": 122,
+    "ckanScheduleCount": 5566,
+    "dbScheduleCount": 5566
+  },
+  "overallAccuracy": 100.0,
+  "poolsWithIssues": 1,
+  "poolsWithoutIssues": 121,
+  "issueSummary": {
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "info": 0
+  },
+  "issues": [
+    {
+      "poolLocationId": 329,
+      "poolName": "East York Community Recreation Centre",
+      "severity": "minor",
+      "category": "pool",
+      "checkId": "P-03",
+      "field": "Address",
+      "expected": "1081 1/2 Pape Ave",
+      "actual": "1081 Pape Ave",
+      "details": "Address mismatch: DB=\"1081 Pape Ave\" vs CKAN=\"1081 1/2 Pape Ave\"",
+      "suggestedFix": "Update address to \"1081 1/2 Pape Ave\""
+    }
+  ],
+  "poolStatusMap": {
+    "7": {
+      "name": "Broadlands Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "17": {
+      "name": "Annette Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "24": {
+      "name": "Beaches Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "27": {
+      "name": "Bedford Park Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "31": {
+      "name": "Alexandra Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "36": {
+      "name": "Earl Beatty Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "39": {
+      "name": "Frankland Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "42": {
+      "name": "Antibes Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "45": {
+      "name": "Harrison Pool",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "48": {
+      "name": "Hillcrest Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "58": {
+      "name": "Jimmie Simpson Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "63": {
+      "name": "John Innes Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "70": {
+      "name": "Greenwood Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "77": {
+      "name": "High Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "85": {
+      "name": "Main Square Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "100": {
+      "name": "Mary McCormick Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "145": {
+      "name": "Monarch Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "189": {
+      "name": "North Toronto Memorial Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "196": {
+      "name": "Christie Pits Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "234": {
+      "name": "Matty Eckler Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "243": {
+      "name": "Parkdale Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "267": {
+      "name": "S.H. Armstrong Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "272": {
+      "name": "St. Lawrence Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "282": {
+      "name": "Swansea Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "287": {
+      "name": "Trinity Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "294": {
+      "name": "Wallace Emerson Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "308": {
+      "name": "Fairmount Park Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "329": {
+      "name": "East York Community Recreation Centre",
+      "status": "minor",
+      "issueCount": 1
+    },
+    "342": {
+      "name": "Northview Heights Secondary School",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "343": {
+      "name": "Riverdale Park East",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "352": {
+      "name": "Kidstown - Water Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "357": {
+      "name": "Humber Community Pool",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "421": {
+      "name": "Stan Wadlow Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "425": {
+      "name": "Leaside Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "433": {
+      "name": "Sunnyside Gus Ryder Outdoor Pool",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "437": {
+      "name": "Donald D. Summerville Olympic Pools",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "451": {
+      "name": "Wellesley Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "480": {
+      "name": "Amesbury Sports Complex",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "499": {
+      "name": "Cummer Park Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "502": {
+      "name": "Fairbank Memorial Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "504": {
+      "name": "Smythe Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "506": {
+      "name": "McGregor Park Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "507": {
+      "name": "Birchmount Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "508": {
+      "name": "Weston Lions Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "509": {
+      "name": "Joseph J. Piccininni Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "510": {
+      "name": "Runnymede Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "514": {
+      "name": "Earlscourt Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "523": {
+      "name": "Agincourt Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "537": {
+      "name": "Centennial Recreation Centre - Scarborough",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "542": {
+      "name": "Leaside Gardens Indoor Pool",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "557": {
+      "name": "Blantyre Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "567": {
+      "name": "Douglas Snow Aquatic Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "575": {
+      "name": "Driftwood Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "633": {
+      "name": "Heron Park Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "638": {
+      "name": "Glen Long Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "642": {
+      "name": "Gord and Irene Risk Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "643": {
+      "name": "Goulding Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "647": {
+      "name": "Grandravine Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "664": {
+      "name": "Irving W. Chapley Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "675": {
+      "name": "Lawrence Heights Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "678": {
+      "name": "Ledbury Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "690": {
+      "name": "Knob Hill Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "693": {
+      "name": "Mitchell Field Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "703": {
+      "name": "Northwood Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "704": {
+      "name": "Maryvale Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "714": {
+      "name": "Oriole Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "718": {
+      "name": "Parkway Forest Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "732": {
+      "name": "Pleasantview Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "744": {
+      "name": "Roding Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "760": {
+      "name": "Domenico DiLuca Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "768": {
+      "name": "Halbert Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "773": {
+      "name": "Wedgewood Park - Etobicoke",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "780": {
+      "name": "Oakdale Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "795": {
+      "name": "The Elms Community School and Pool",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "797": {
+      "name": "Norseman Community School and Pool",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "840": {
+      "name": "Eringate Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "843": {
+      "name": "Gihon Spring Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "847": {
+      "name": "Lambton - Kingsway Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "857": {
+      "name": "Ourland Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "858": {
+      "name": "Park Lawn Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "859": {
+      "name": "Pine Point Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "867": {
+      "name": "Rotary Peace Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "869": {
+      "name": "Smithfield Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "873": {
+      "name": "West Deane Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "876": {
+      "name": "Westgrove Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "877": {
+      "name": "Silver Creek Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "891": {
+      "name": "Memorial Pool and Health Club",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "892": {
+      "name": "Etobicoke Olympium",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "893": {
+      "name": "Albion Pool and Health Club",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "896": {
+      "name": "Gus Ryder Pool and Health Club",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "897": {
+      "name": "Alderwood Pool",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "939": {
+      "name": "Amos Waites Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "963": {
+      "name": "Flagstaff Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1007": {
+      "name": "Fairhaven Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1056": {
+      "name": "Dennis R. Timbrell Resource Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1093": {
+      "name": "O'Connor Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1098": {
+      "name": "Scadding Court Community Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1110": {
+      "name": "Albert Campbell Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1143": {
+      "name": "Cedarbrae Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1163": {
+      "name": "CW Jefferys Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1164": {
+      "name": "DA Morrison Middle School",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1186": {
+      "name": "Emery Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1200": {
+      "name": "Georges Vanier Secondary School",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1205": {
+      "name": "Gordon A. Brown Middle School",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1250": {
+      "name": "L'Amoreaux Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1255": {
+      "name": "Lester B. Pearson Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1315": {
+      "name": "Sir Oliver Mowat Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1371": {
+      "name": "Vaughan Road Academy",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1373": {
+      "name": "Victoria Park Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1381": {
+      "name": "West Hill Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1384": {
+      "name": "Weston Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1387": {
+      "name": "Wexford Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "1399": {
+      "name": "York Mills Collegiate Institute",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "2006": {
+      "name": "Westmount Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "2012": {
+      "name": "Pam McConnell Aquatic Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "2642": {
+      "name": "Dennis Flynn Park",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "2750": {
+      "name": "Stanley Park South - Toronto",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "2773": {
+      "name": "Toronto Pan Am Sports Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "3501": {
+      "name": "York Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "3732": {
+      "name": "One Yonge Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "3775": {
+      "name": "Ethennonnhawahstihnen' Community Recreation Centre and Library",
+      "status": "pass",
+      "issueCount": 0
+    },
+    "3858": {
+      "name": "Rouge Valley Community Recreation Centre",
+      "status": "pass",
+      "issueCount": 0
+    }
+  }
+}

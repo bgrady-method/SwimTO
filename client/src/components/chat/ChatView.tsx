@@ -1,15 +1,17 @@
 import { useRef, useEffect } from 'react';
-import { Waves } from 'lucide-react';
+import { Waves, WifiOff } from 'lucide-react';
 import { ChatInput } from './ChatInput';
 import { ChatMessageBubble } from './ChatMessageBubble';
 import { SuggestedQueries } from './SuggestedQueries';
 import { useChatStream } from '@/hooks/useChatStream';
 import { useChatStore } from '@/stores/useChatStore';
+import { useOfflineStatus } from '@/hooks/useOfflineStatus';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 export function ChatView() {
   const { messages } = useChatStore();
   const { sendMessage, isStreaming } = useChatStream();
+  const { isOffline } = useOfflineStatus();
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -20,6 +22,12 @@ export function ChatView() {
 
   return (
     <div className="flex flex-col h-full">
+      {isOffline && (
+        <div className="flex items-center gap-2 px-4 py-2 bg-amber-50 dark:bg-amber-950/50 border-b border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300 text-xs">
+          <WifiOff className="h-3.5 w-3.5 shrink-0" />
+          <span>You're offline. Chat has limited capabilities. Try the <strong>Explore</strong> tab to browse cached results.</span>
+        </div>
+      )}
       <ScrollArea className="flex-1 overflow-x-hidden">
         {isEmpty ? (
           <div className="flex flex-col items-center justify-center px-4 pt-16 pb-8 gap-6">

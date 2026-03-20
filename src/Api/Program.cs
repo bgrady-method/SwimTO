@@ -57,6 +57,7 @@ builder.Services.AddScoped<ChatService>();
 // Data sync
 builder.Services.AddScoped<TorontoOpenDataClient>();
 builder.Services.AddScoped<PoolDataSyncService>();
+builder.Services.AddScoped<PoolEnrichmentService>();
 builder.Services.AddHostedService<PoolDataSyncBackgroundService>();
 
 var app = builder.Build();

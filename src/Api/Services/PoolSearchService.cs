@@ -47,8 +47,10 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
 
         foreach (var (pool, distance) in poolsWithDistance)
         {
-            // Apply PoolType filter in-memory
-            if (request.Attributes?.PoolType is not null && pool.PoolType != request.Attributes.PoolType)
+            // Apply PoolType filter in-memory ("Both" matches either Indoor or Outdoor)
+            if (request.Attributes?.PoolType is not null
+                && pool.PoolType != request.Attributes.PoolType
+                && pool.PoolType != "Both")
                 continue;
 
             var scheduleList = FilterSchedules(pool.Schedules, request.SwimTypes, request.DaysOfWeek,
@@ -75,6 +77,7 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
                 IsAccessible = pool.IsAccessible,
                 Phone = pool.Phone,
                 Website = pool.Website,
+                ImageUrl = pool.ImageUrl,
                 DistanceKm = Math.Round(distance, 2),
                 CompositeScore = Math.Round(compositeScore, 4),
                 Scores = scores,
@@ -142,7 +145,9 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
             var count = 0;
             foreach (var (pool, _) in poolsWithDistance)
             {
-                if (request.Attributes?.PoolType is not null && pool.PoolType != request.Attributes.PoolType)
+                if (request.Attributes?.PoolType is not null
+                    && pool.PoolType != request.Attributes.PoolType
+                    && pool.PoolType != "Both")
                     continue;
 
                 // Apply all schedule filters except swimTypes, then check if this swimType exists
@@ -161,7 +166,9 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
             var count = 0;
             foreach (var (pool, _) in poolsWithDistance)
             {
-                if (request.Attributes?.PoolType is not null && pool.PoolType != request.Attributes.PoolType)
+                if (request.Attributes?.PoolType is not null
+                    && pool.PoolType != request.Attributes.PoolType
+                    && pool.PoolType != "Both")
                     continue;
 
                 var schedules = FilterSchedules(pool.Schedules, request.SwimTypes, null,
@@ -174,12 +181,13 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
         }
 
         // Pool type facets: count pools matching all filters EXCEPT poolType
+        // "Both" pools count toward both Indoor and Outdoor facets
         foreach (var poolType in new[] { "Indoor", "Outdoor" })
         {
             var count = 0;
             foreach (var (pool, _) in poolsWithDistance)
             {
-                if (pool.PoolType != poolType)
+                if (pool.PoolType != poolType && pool.PoolType != "Both")
                     continue;
 
                 var schedules = FilterSchedules(pool.Schedules, request.SwimTypes, request.DaysOfWeek,

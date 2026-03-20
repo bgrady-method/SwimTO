@@ -1,5 +1,7 @@
 import { Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+import { ExternalLink } from 'lucide-react';
+import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { useMapStore } from '@/stores/useMapStore';
 import { formatDistance } from '@/lib/geo-utils';
 import { DAY_NAMES } from '@/types/pool';
@@ -58,7 +60,17 @@ export function PoolMarker({ result }: PoolMarkerProps) {
     >
       <Popup className="pool-popup" maxWidth={280}>
         <div className="p-1">
-          <h3 className="font-semibold text-sm mb-1">{result.name}</h3>
+          {result.imageUrl && (
+            <img
+              src={result.imageUrl}
+              alt={result.name}
+              className="max-h-24 w-full object-cover rounded mb-2"
+            />
+          )}
+          <div className="flex items-start justify-between gap-1 mb-1">
+            <h3 className="font-semibold text-sm">{result.name}</h3>
+            <FavoriteButton poolId={result.poolId} size={14} />
+          </div>
           <p className="text-xs text-gray-500 mb-2">
             {result.poolType} · {formatDistance(result.distanceKm)}
             {result.lengthMeters && <> · {result.lengthMeters}m</>}
@@ -73,6 +85,17 @@ export function PoolMarker({ result }: PoolMarkerProps) {
                 </p>
               ))}
             </div>
+          )}
+          {result.website && (
+            <a
+              href={result.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs text-sky-600 hover:text-sky-700 mt-2"
+            >
+              <ExternalLink className="h-3 w-3" />
+              City of Toronto page
+            </a>
           )}
         </div>
       </Popup>

@@ -10,6 +10,7 @@ public class PoolDataSyncService(
     AppDbContext db,
     TorontoOpenDataClient client,
     GeocodingService geocodingService,
+    PoolEnrichmentService enrichmentService,
     ILogger<PoolDataSyncService> logger)
 {
     private static readonly Dictionary<string, int> DayNameToNumber = new(StringComparer.OrdinalIgnoreCase)
@@ -85,10 +86,11 @@ public class PoolDataSyncService(
                 if (locId is null || !idSet.Contains(locId.Value)) continue;
 
                 var streetNo = rec.GetString("Street No");
+                var streetNoSuffix = rec.GetString("Street No Suffix");
                 var streetName = rec.GetString("Street Name");
                 var streetType = rec.GetString("Street Type");
                 var streetDir = rec.GetString("Street Direction");
-                var address = BuildAddress(streetNo, streetName, streetType, streetDir);
+                var address = BuildAddress(streetNo, streetNoSuffix, streetName, streetType, streetDir);
 
                 locationMap[locId.Value] = new LocationInfo(
                     Name: rec.GetString("Location Name"),
@@ -112,9 +114,30 @@ public class PoolDataSyncService(
                 if (locId is null || !idSet.Contains(locId.Value)) continue;
 
                 double? lat = null, lng = null;
-                if (rec.TryGetValue("geometry", out var geoEl) && geoEl.ValueKind == JsonValueKind.Object)
+                if (rec.TryGetValue("geometry", out var geoEl))
                 {
-                    if (geoEl.TryGetProperty("coordinates", out var coords) && coords.ValueKind == JsonValueKind.Array)
+                    // CKAN DataStore returns geometry as a JSON string, not a JSON object
+                    JsonElement geometryObj;
+                    if (geoEl.ValueKind == JsonValueKind.Object)
+                    {
+                        geometryObj = geoEl;
+                    }
+                    else if (geoEl.ValueKind == JsonValueKind.String)
+                    {
+                        var geoStr = geoEl.GetString();
+                        if (!string.IsNullOrEmpty(geoStr))
+                            geometryObj = JsonDocument.Parse(geoStr).RootElement;
+                        else
+                            geometryObj = default;
+                    }
+                    else
+                    {
+                        geometryObj = default;
+                    }
+
+                    if (geometryObj.ValueKind == JsonValueKind.Object
+                        && geometryObj.TryGetProperty("coordinates", out var coords)
+                        && coords.ValueKind == JsonValueKind.Array)
                     {
                         var arr = coords.EnumerateArray().ToList();
                         if (arr.Count >= 2)
@@ -208,26 +231,39 @@ public class PoolDataSyncService(
                 var address = location?.Address ?? geo?.Address ?? "UNKNOWN";
                 var lat = geo?.Latitude;
                 var lng = geo?.Longitude;
-                var phone = !string.IsNullOrWhiteSpace(geo?.Phone) ? geo.Phone : null;
-                var website = !string.IsNullOrWhiteSpace(geo?.Url) ? geo.Url : null;
+                var phone = !string.IsNullOrWhiteSpace(geo?.Phone) ? geo.Phone.Trim() : null;
+                var website = !string.IsNullOrWhiteSpace(geo?.Url) ? geo.Url.Trim() : null;
                 var isAccessible = location?.Accessibility is "Fully Accessible" or "Partially Accessible";
 
-                // Geocode fallback for missing coordinates
+                // Validate GeoJSON coordinates are within Toronto bounds
+                if (lat is not null && lng is not null && !IsWithinTorontoBounds(lat.Value, lng.Value))
+                {
+                    logger.LogWarning("Coordinates for Location {Id} ({Lat}, {Lng}) outside Toronto bounds, discarding",
+                        locId, lat, lng);
+                    lat = null;
+                    lng = null;
+                }
+
+                // Geocode fallback for missing/invalid coordinates
                 if (lat is null or 0 || lng is null or 0)
                 {
                     if (address != "UNKNOWN")
                     {
                         var geocoded = await geocodingService.GeocodeAsync(address);
-                        if (geocoded is not null)
+                        if (geocoded is not null && IsWithinTorontoBounds(geocoded.Lat, geocoded.Lng))
                         {
                             lat = geocoded.Lat;
                             lng = geocoded.Lng;
                         }
+                        else if (geocoded is not null)
+                        {
+                            logger.LogWarning("Geocoded coordinates for Location {Id} ({Lat}, {Lng}) outside Toronto bounds",
+                                locId, geocoded.Lat, geocoded.Lng);
+                        }
                     }
                 }
 
-                // Use "Indoor" for "Both" since the Pool model only supports Indoor/Outdoor
-                var poolType = facility.PoolType == "Both" ? "Indoor" : facility.PoolType;
+                var poolType = facility.PoolType;
 
                 if (existingByLocationId.TryGetValue(locId, out var existingPool))
                 {
@@ -298,6 +334,16 @@ public class PoolDataSyncService(
             await db.SaveChangesAsync(ct);
             await transaction.CommitAsync(ct);
 
+            // Enrich pools with images and dimensions from Toronto location API
+            try
+            {
+                await enrichmentService.EnrichAllAsync(ct);
+            }
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                logger.LogWarning(ex, "Pool enrichment failed (non-fatal)");
+            }
+
             // Update sync log
             syncLog.Status = "Success";
             syncLog.CompletedAt = DateTime.UtcNow;
@@ -323,13 +369,23 @@ public class PoolDataSyncService(
         }
     }
 
-    private static string BuildAddress(string streetNo, string streetName, string streetType, string streetDir)
+    private static bool IsWithinTorontoBounds(double lat, double lng) =>
+        lat is >= 43.58 and <= 43.86 && lng is >= -79.65 and <= -79.10;
+
+    private static bool IsValidAddressPart(string? part) =>
+        !string.IsNullOrWhiteSpace(part) && !part.Equals("None", StringComparison.OrdinalIgnoreCase);
+
+    private static string BuildAddress(string streetNo, string streetNoSuffix, string streetName, string streetType, string streetDir)
     {
         var parts = new List<string>();
-        if (!string.IsNullOrWhiteSpace(streetNo)) parts.Add(streetNo);
-        if (!string.IsNullOrWhiteSpace(streetName)) parts.Add(streetName);
-        if (!string.IsNullOrWhiteSpace(streetType)) parts.Add(streetType);
-        if (!string.IsNullOrWhiteSpace(streetDir)) parts.Add(streetDir);
+        // Combine street number and suffix (e.g., "1081" + "1/2" -> "1081 1/2")
+        if (IsValidAddressPart(streetNo))
+        {
+            parts.Add(IsValidAddressPart(streetNoSuffix) ? $"{streetNo} {streetNoSuffix}" : streetNo);
+        }
+        if (IsValidAddressPart(streetName)) parts.Add(streetName);
+        if (IsValidAddressPart(streetType)) parts.Add(streetType);
+        if (IsValidAddressPart(streetDir)) parts.Add(streetDir);
         return string.Join(" ", parts);
     }
 

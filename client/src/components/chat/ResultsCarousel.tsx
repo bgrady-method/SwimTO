@@ -1,4 +1,5 @@
-import { MapPin, Rows3, Waves } from 'lucide-react';
+import { ExternalLink, MapPin, Rows3, Waves } from 'lucide-react';
+import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { useMapStore } from '@/stores/useMapStore';
 import { formatDistance } from '@/lib/geo-utils';
 import { cn } from '@/lib/utils';
@@ -37,12 +38,19 @@ export function ResultsCarousel({ pools }: ResultsCarouselProps) {
           }}
           className="group flex flex-col w-[200px] shrink-0 rounded-xl bg-background border border-border overflow-hidden hover:border-sky-300 hover:shadow-md transition-all text-left"
         >
-          {/* Visual header with pool icon */}
+          {/* Visual header with pool image or gradient fallback */}
           <div className={cn(
-            'relative h-16 bg-gradient-to-br flex items-center justify-center',
+            'relative h-16 bg-gradient-to-br flex items-center justify-center overflow-hidden',
             getPoolGradient(pool.poolType, pool.poolId)
           )}>
-            <Waves className="h-8 w-8 text-white/40" />
+            {pool.imageUrl ? (
+              <img src={pool.imageUrl} alt={pool.name} className="h-16 w-full object-cover" />
+            ) : (
+              <Waves className="h-8 w-8 text-white/40" />
+            )}
+            <div className="absolute top-1.5 right-1.5">
+              <FavoriteButton poolId={pool.poolId} size={14} className="text-white hover:bg-white/20" />
+            </div>
             <div className="absolute top-1.5 left-1.5 flex gap-1">
               {pool.poolType && (
                 <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-white/20 text-white backdrop-blur-sm">
@@ -84,6 +92,18 @@ export function ResultsCarousel({ pools }: ResultsCarouselProps) {
               )}
             </div>
 
+            {pool.website && (
+              <a
+                href={pool.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-0.5 text-[10px] text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300"
+              >
+                <ExternalLink className="h-2.5 w-2.5" />
+                City of Toronto page
+              </a>
+            )}
             <div className="text-[10px] text-sky-600 font-medium pt-0.5">
               Show on map →
             </div>

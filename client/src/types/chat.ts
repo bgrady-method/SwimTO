@@ -16,6 +16,8 @@ export interface PoolReference {
   lengthMeters?: number;
   laneCount?: number;
   distanceKm?: number;
+  website?: string;
+  imageUrl?: string | null;
 }
 
 export interface ChatRequest {

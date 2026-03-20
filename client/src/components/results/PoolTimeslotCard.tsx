@@ -2,6 +2,7 @@ import { MapPin, Ruler, Rows3, Accessibility, Droplets, Clock, ExternalLink } fr
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { MatchScoreBar } from './MatchScoreBar';
+import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { useMapStore } from '@/stores/useMapStore';
 import { formatDistance } from '@/lib/geo-utils';
 import { cn } from '@/lib/utils';
@@ -32,8 +33,8 @@ export function PoolTimeslotCard({ result, compact }: PoolTimeslotCardProps) {
   return (
     <Card
       className={cn(
-        'p-3 hover:shadow-md transition-all cursor-pointer border-border',
-        compact ? 'p-2.5' : 'p-3'
+        'hover:shadow-md transition-all cursor-pointer border-border overflow-hidden',
+        result.imageUrl ? 'p-0' : (compact ? 'p-2.5' : 'p-3')
       )}
       onMouseEnter={() => setHoveredPool(result.poolId)}
       onMouseLeave={() => setHoveredPool(null)}
@@ -42,6 +43,10 @@ export function PoolTimeslotCard({ result, compact }: PoolTimeslotCardProps) {
         setSelectedPool(result.poolId);
       }}
     >
+      {result.imageUrl && (
+        <img src={result.imageUrl} alt={result.name} className="h-20 w-full object-cover" />
+      )}
+      <div className={cn(result.imageUrl && (compact ? 'p-2.5' : 'p-3'))}>
       {/* Header */}
       <div className="flex items-start justify-between gap-2 mb-2">
         <div className="min-w-0">
@@ -53,9 +58,12 @@ export function PoolTimeslotCard({ result, compact }: PoolTimeslotCardProps) {
             <span className="font-mono">{formatDistance(result.distanceKm)}</span>
           </div>
         </div>
-        <Badge variant="outline" className="text-xs shrink-0">
-          {result.poolType}
-        </Badge>
+        <div className="flex items-center gap-1 shrink-0">
+          <FavoriteButton poolId={result.poolId} size={14} />
+          <Badge variant="outline" className="text-xs">
+            {result.poolType}
+          </Badge>
+        </div>
       </div>
 
       {/* Swim type badges */}
@@ -133,6 +141,7 @@ export function PoolTimeslotCard({ result, compact }: PoolTimeslotCardProps) {
 
       {/* Score bar */}
       <MatchScoreBar score={result.compositeScore} />
+      </div>
     </Card>
   );
 }

@@ -13,7 +13,9 @@
     "@base-ui/react": "^1.3.0",
     "@fontsource-variable/geist": "^5.2.8",
     "@tailwindcss/typography": "^0.5.19",
+    "@tanstack/query-sync-storage-persister": "^5.90.27",
     "@tanstack/react-query": "^5.91.2",
+    "@tanstack/react-query-persist-client": "^5.90.27",
     "axios": "^1.13.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -46,6 +48,7 @@
     "tailwindcss": "^4.2.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.57.0",
-    "vite": "^8.0.1"
+    "vite": "^8.0.1",
+    "vite-plugin-pwa": "^1.2.0"
   }
 }
