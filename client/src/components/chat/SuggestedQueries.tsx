@@ -1,6 +1,6 @@
 const SUGGESTIONS = [
   'Lane swim near me this Saturday morning',
-  'Indoor 50m pools in Toronto',
+  'Indoor pools near downtown',
   'Family swim times on weekends',
   'Aquafit classes near downtown',
   'Women-only swim sessions',

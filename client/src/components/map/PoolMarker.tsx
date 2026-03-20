@@ -73,7 +73,6 @@ export function PoolMarker({ result }: PoolMarkerProps) {
           </div>
           <p className="text-xs text-gray-500 mb-2">
             {result.poolType} · {formatDistance(result.distanceKm)}
-            {result.lengthMeters && <> · {result.lengthMeters}m</>}
             {result.laneCount && <> · {result.laneCount} lanes</>}
           </p>
           {result.matchingSchedules.length > 0 && (

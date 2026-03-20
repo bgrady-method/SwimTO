@@ -16,7 +16,6 @@ export function usePoolSearch() {
     location: location ?? undefined,
     attributes: {
       poolType: attributes.poolType,
-      minLength: attributes.minLength,
       minLanes: attributes.minLanes,
     },
     ranking: weights,

@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 
 const WEIGHT_CONFIG = [
   { key: 'proximity' as const, label: 'Proximity', color: 'bg-emerald-500' },
-  { key: 'poolLength' as const, label: 'Pool Length', color: 'bg-sky-500' },
   { key: 'laneCount' as const, label: 'Lane Count', color: 'bg-violet-500' },
   { key: 'scheduleConvenience' as const, label: 'Schedule Fit', color: 'bg-amber-500' },
 ];

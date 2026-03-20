@@ -57,11 +57,6 @@ export function ResultsCarousel({ pools }: ResultsCarouselProps) {
                   {pool.poolType}
                 </span>
               )}
-              {pool.lengthMeters && (
-                <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-white/20 text-white backdrop-blur-sm">
-                  {pool.lengthMeters}m
-                </span>
-              )}
             </div>
             {pool.distanceKm != null && (
               <span className="absolute bottom-1.5 right-1.5 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-black/30 text-white backdrop-blur-sm">

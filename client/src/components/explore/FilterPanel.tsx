@@ -18,10 +18,7 @@ export function FilterPanel() {
     toggleShowFavoritesOnly, resetFilters,
   } = useFilterStore();
 
-  const { facets, results } = usePoolSearch();
-
-  const poolsWithLength = results.filter((r) => r.lengthMeters != null).length;
-  const totalPools = results.length;
+  const { facets } = usePoolSearch();
 
   const [locationInput, setLocationInput] = useState('');
   const [sections, setSections] = useState({ swimType: true, time: true, location: true, pool: false });
@@ -200,20 +197,6 @@ export function FilterPanel() {
                 </button>
               );
             })}
-          </div>
-          <div className="space-y-1">
-            <div className="flex justify-between text-xs text-muted-foreground">
-              <span>Min pool length{totalPools > 0 && ` (${poolsWithLength}/${totalPools} have data)`}</span>
-              <span className="font-mono">{attributes.minLength ?? 0}m</span>
-            </div>
-            <Slider
-              value={[attributes.minLength ?? 0]}
-              onValueChange={(val) => { const v = Array.isArray(val) ? val[0] : val; setAttributes({ minLength: v > 0 ? v : null }); }}
-              min={0}
-              max={50}
-              step={25}
-              className="py-1"
-            />
           </div>
         </div>
       </CollapsibleSection>

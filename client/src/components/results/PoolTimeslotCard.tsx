@@ -1,4 +1,4 @@
-import { MapPin, Ruler, Rows3, Accessibility, Droplets, Clock, ExternalLink } from 'lucide-react';
+import { MapPin, Rows3, Accessibility, Droplets, Clock, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { MatchScoreBar } from './MatchScoreBar';
@@ -102,12 +102,6 @@ export function PoolTimeslotCard({ result, compact }: PoolTimeslotCardProps) {
 
       {/* Attributes */}
       <div className="flex items-center gap-3 text-xs text-muted-foreground mb-2">
-        {result.lengthMeters && (
-          <span className="flex items-center gap-1">
-            <Ruler className="h-3 w-3" />
-            {result.lengthMeters}m
-          </span>
-        )}
         {result.laneCount && (
           <span className="flex items-center gap-1">
             <Rows3 className="h-3 w-3" />

@@ -19,7 +19,6 @@ function buildSystemPrompt(pools?: PoolSearchResult[]): string {
   for (const pool of pools) {
     const attrs: string[] = [pool.poolType];
     if (pool.distanceKm != null) attrs.push(`${pool.distanceKm.toFixed(1)}km away`);
-    if (pool.lengthMeters) attrs.push(`${pool.lengthMeters}m pool`);
     if (pool.laneCount) attrs.push(`${pool.laneCount} lanes`);
     if (pool.isAccessible) attrs.push('accessible');
 
@@ -192,13 +191,6 @@ function createKeywordSession(pools?: PoolSearchResult[]): OfflineAISession {
           .map((p) => `- **${p.name}** — ${p.distanceKm.toFixed(1)}km (${p.poolType})`)
           .join('\n');
         return `Closest pools to you:\n\n${list}`;
-      },
-    },
-    {
-      pattern: /50\s*m|50\s*met|long\s*course/i,
-      respond: () => {
-        const matches = findPools((p) => (p.lengthMeters ?? 0) >= 50);
-        return `50m pools:\n\n${matches}`;
       },
     },
     {
