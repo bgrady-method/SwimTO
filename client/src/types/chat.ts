@@ -18,6 +18,7 @@ export interface PoolReference {
   distanceKm?: number;
   website?: string;
   imageUrl?: string | null;
+  amenities?: { name: string; verified: boolean }[];
 }
 
 export interface ChatRequest {

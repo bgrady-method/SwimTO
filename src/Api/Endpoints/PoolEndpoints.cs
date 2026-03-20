@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Api.Data;
 using Api.Models.Dto;
 using Api.Services;
@@ -39,6 +40,7 @@ public static class PoolEndpoints
                 pool.Phone,
                 pool.Website,
                 pool.ImageUrl,
+                Amenities = pool.AmenitiesJson != null ? JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson) : null,
             });
         });
 

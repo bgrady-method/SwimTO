@@ -47,10 +47,19 @@ builder.Services.AddHttpClient("TorontoOpenData", client =>
     client.Timeout = TimeSpan.FromSeconds(30);
 });
 
+// HTTP client for web fetching
+builder.Services.AddHttpClient("WebFetch", client =>
+{
+    client.DefaultRequestHeaders.Add("User-Agent", "SwimTO/1.0 (toronto-pool-finder)");
+    client.Timeout = TimeSpan.FromSeconds(15);
+});
+
 // Services
 builder.Services.AddScoped<PoolRankingService>();
 builder.Services.AddScoped<PoolSearchService>();
 builder.Services.AddScoped<GeocodingService>();
+builder.Services.AddScoped<WebFetchService>();
+builder.Services.AddScoped<KnowledgeService>();
 builder.Services.AddScoped<ChatToolExecutor>();
 builder.Services.AddScoped<ChatService>();
 

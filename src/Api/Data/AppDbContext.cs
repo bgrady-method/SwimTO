@@ -12,6 +12,7 @@ public class AppDbContext : DbContext
     public DbSet<ChatSession> ChatSessions => Set<ChatSession>();
     public DbSet<ChatMessage> ChatMessages => Set<ChatMessage>();
     public DbSet<DataSyncLog> DataSyncLogs => Set<DataSyncLog>();
+    public DbSet<KnowledgeEntry> KnowledgeEntries => Set<KnowledgeEntry>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -59,6 +60,19 @@ public class AppDbContext : DbContext
                 .WithMany(s => s.Messages)
                 .HasForeignKey(e => e.ChatSessionId)
                 .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<KnowledgeEntry>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Topic).IsRequired().HasMaxLength(100);
+            entity.Property(e => e.Fact).IsRequired().HasMaxLength(2000);
+            entity.Property(e => e.SourceUrl).HasMaxLength(500);
+            entity.HasIndex(e => new { e.PoolId, e.Topic });
+            entity.HasOne(e => e.Pool)
+                .WithMany()
+                .HasForeignKey(e => e.PoolId)
+                .OnDelete(DeleteBehavior.SetNull);
         });
     }
 }

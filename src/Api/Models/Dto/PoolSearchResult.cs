@@ -14,6 +14,7 @@ public class PoolSearchResult
     public string? Phone { get; set; }
     public string? Website { get; set; }
     public string? ImageUrl { get; set; }
+    public AmenityItem[]? Amenities { get; set; }
     public double DistanceKm { get; set; }
     public double CompositeScore { get; set; }
     public ScoreBreakdown Scores { get; set; } = new();

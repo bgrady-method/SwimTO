@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Api.Data;
 using Api.Models.Dto;
 using Microsoft.EntityFrameworkCore;
@@ -53,6 +54,10 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
                 && pool.PoolType != "Both")
                 continue;
 
+            // Apply amenity filter
+            if (request.Attributes?.Amenities is { Length: > 0 } && !PoolHasAllAmenities(pool, request.Attributes.Amenities))
+                continue;
+
             var scheduleList = FilterSchedules(pool.Schedules, request.SwimTypes, request.DaysOfWeek,
                 request.TimeFrom, request.TimeTo, request.DateFrom, request.DateTo);
 
@@ -78,6 +83,7 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
                 Phone = pool.Phone,
                 Website = pool.Website,
                 ImageUrl = pool.ImageUrl,
+                Amenities = pool.AmenitiesJson != null ? JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson) : null,
                 DistanceKm = Math.Round(distance, 2),
                 CompositeScore = Math.Round(compositeScore, 4),
                 Scores = scores,
@@ -150,6 +156,9 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
                     && pool.PoolType != "Both")
                     continue;
 
+                if (request.Attributes?.Amenities is { Length: > 0 } && !PoolHasAllAmenities(pool, request.Attributes.Amenities))
+                    continue;
+
                 // Apply all schedule filters except swimTypes, then check if this swimType exists
                 var schedules = FilterSchedules(pool.Schedules, null, request.DaysOfWeek,
                     request.TimeFrom, request.TimeTo, request.DateFrom, request.DateTo);
@@ -171,6 +180,9 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
                     && pool.PoolType != "Both")
                     continue;
 
+                if (request.Attributes?.Amenities is { Length: > 0 } && !PoolHasAllAmenities(pool, request.Attributes.Amenities))
+                    continue;
+
                 var schedules = FilterSchedules(pool.Schedules, request.SwimTypes, null,
                     request.TimeFrom, request.TimeTo, request.DateFrom, request.DateTo);
 
@@ -190,6 +202,9 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
                 if (pool.PoolType != poolType && pool.PoolType != "Both")
                     continue;
 
+                if (request.Attributes?.Amenities is { Length: > 0 } && !PoolHasAllAmenities(pool, request.Attributes.Amenities))
+                    continue;
+
                 var schedules = FilterSchedules(pool.Schedules, request.SwimTypes, request.DaysOfWeek,
                     request.TimeFrom, request.TimeTo, request.DateFrom, request.DateTo);
 
@@ -202,6 +217,52 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
             facets.PoolTypes[poolType] = count;
         }
 
+        // Amenity facets: count pools that have each amenity, respecting all filters EXCEPT amenities
+        var allAmenities = poolsWithDistance
+            .Where(p => p.Pool.AmenitiesJson != null)
+            .SelectMany(p => (JsonSerializer.Deserialize<AmenityItem[]>(p.Pool.AmenitiesJson!) ?? []).Select(a => a.Name))
+            .Distinct();
+
+        foreach (var amenity in allAmenities)
+        {
+            var count = 0;
+            foreach (var (pool, _) in poolsWithDistance)
+            {
+                if (request.Attributes?.PoolType is not null
+                    && pool.PoolType != request.Attributes.PoolType
+                    && pool.PoolType != "Both")
+                    continue;
+
+                if (!PoolHasAmenity(pool, amenity))
+                    continue;
+
+                var schedules = FilterSchedules(pool.Schedules, request.SwimTypes, request.DaysOfWeek,
+                    request.TimeFrom, request.TimeTo, request.DateFrom, request.DateTo);
+
+                if ((request.SwimTypes is { Length: > 0 } || request.DaysOfWeek is { Length: > 0 }) && schedules.Count == 0)
+                    continue;
+
+                count++;
+            }
+            facets.Amenities[amenity] = count;
+        }
+
         return facets;
+    }
+
+    private static bool PoolHasAllAmenities(Models.Pool pool, string[] requiredAmenities)
+    {
+        if (pool.AmenitiesJson is null) return false;
+        var poolAmenities = JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson);
+        if (poolAmenities is null) return false;
+        var names = poolAmenities.Select(a => a.Name).ToArray();
+        return requiredAmenities.All(a => names.Contains(a, StringComparer.OrdinalIgnoreCase));
+    }
+
+    private static bool PoolHasAmenity(Models.Pool pool, string amenity)
+    {
+        if (pool.AmenitiesJson is null) return false;
+        var poolAmenities = JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson);
+        return poolAmenities?.Any(a => string.Equals(a.Name, amenity, StringComparison.OrdinalIgnoreCase)) ?? false;
     }
 }

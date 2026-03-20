@@ -5,7 +5,7 @@ import { useWeightStore } from '@/stores/useWeightStore';
 import type { PoolSearchRequest } from '@/types/filters';
 
 export function usePoolSearch() {
-  const { swimTypes, daysOfWeek, timeFrom, timeTo, location, attributes } = useFilterStore();
+  const { swimTypes, daysOfWeek, amenities, timeFrom, timeTo, location, attributes } = useFilterStore();
   const { weights } = useWeightStore();
 
   const request: PoolSearchRequest = {
@@ -17,6 +17,7 @@ export function usePoolSearch() {
     attributes: {
       poolType: attributes.poolType,
       minLanes: attributes.minLanes,
+      amenities: amenities.length > 0 ? amenities : undefined,
     },
     ranking: weights,
     includeFacets: true,

@@ -12,16 +12,16 @@ import { SWIM_TYPES, DAY_NAMES } from '@/types/pool';
 
 export function FilterPanel() {
   const {
-    swimTypes, daysOfWeek, timeFrom, timeTo, location, attributes,
+    swimTypes, daysOfWeek, amenities, timeFrom, timeTo, location, attributes,
     showFavoritesOnly,
-    toggleSwimType, toggleDay, setTimeRange, setLocation, setAttributes,
+    toggleSwimType, toggleDay, toggleAmenity, setTimeRange, setLocation, setAttributes,
     toggleShowFavoritesOnly, resetFilters,
   } = useFilterStore();
 
   const { facets } = usePoolSearch();
 
   const [locationInput, setLocationInput] = useState('');
-  const [sections, setSections] = useState({ swimType: true, time: true, location: true, pool: false });
+  const [sections, setSections] = useState({ swimType: true, time: true, location: true, pool: false, amenities: false });
 
   const { data: dynamicSwimTypes } = useQuery({
     queryKey: ['swimTypes'],
@@ -200,6 +200,35 @@ export function FilterPanel() {
           </div>
         </div>
       </CollapsibleSection>
+
+      {/* Amenities */}
+      {facets?.amenities && Object.keys(facets.amenities).length > 0 && (
+        <CollapsibleSection title="Amenities" open={sections.amenities} onToggle={() => toggleSection('amenities')}>
+          <div className="flex flex-wrap gap-1.5">
+            {Object.entries(facets.amenities)
+              .sort(([, a], [, b]) => b - a)
+              .map(([amenity, count]) => {
+                const isZero = count === 0;
+                return (
+                  <button
+                    key={amenity}
+                    onClick={() => toggleAmenity(amenity)}
+                    className={cn(
+                      'text-xs px-3 py-2 min-h-[36px] rounded-full border transition-colors active:opacity-80',
+                      amenities.includes(amenity)
+                        ? 'bg-teal-500 text-white border-teal-500'
+                        : 'bg-background border-border text-muted-foreground hover:border-teal-300',
+                      isZero && !amenities.includes(amenity) && 'opacity-40'
+                    )}
+                  >
+                    {amenity}
+                    <span className="ml-1.5 opacity-75">({count})</span>
+                  </button>
+                );
+              })}
+          </div>
+        </CollapsibleSection>
+      )}
     </div>
   );
 }

@@ -100,6 +100,29 @@ export function PoolTimeslotCard({ result, compact }: PoolTimeslotCardProps) {
         </div>
       )}
 
+      {/* Amenity badges */}
+      {result.amenities && result.amenities.length > 0 && (
+        <div className="space-y-1 mb-2">
+          <div className="flex flex-wrap gap-1">
+            {result.amenities.map((a) => (
+              <span
+                key={a.name}
+                className={cn(
+                  'text-[10px] px-1.5 py-0.5 rounded',
+                  a.verified
+                    ? 'bg-teal-50 text-teal-700 dark:bg-teal-950 dark:text-teal-300'
+                    : 'bg-teal-50/50 text-teal-600 border border-dashed border-teal-300 dark:bg-teal-950/50 dark:text-teal-400 dark:border-teal-700'
+                )}
+              >
+                {!a.verified && <span className="mr-0.5 text-[10px]" title="Unverified — sourced from ArcGIS only">⚠</span>}
+                {a.name}
+              </span>
+            ))}
+          </div>
+          <p className="text-[9px] text-muted-foreground/70">Amenity data sourced from City of Toronto — may not be current</p>
+        </div>
+      )}
+
       {/* Attributes */}
       <div className="flex items-center gap-3 text-xs text-muted-foreground mb-2">
         {result.laneCount && (

@@ -26,6 +26,7 @@ public class AttributeFilter
     public string? PoolType { get; set; }
     public double? MinLength { get; set; }
     public int? MinLanes { get; set; }
+    public string[]? Amenities { get; set; }
 }
 
 public class RankingWeights

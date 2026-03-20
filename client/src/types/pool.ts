@@ -1,3 +1,8 @@
+export interface AmenityItem {
+  name: string;
+  verified: boolean;
+}
+
 export interface Pool {
   poolId: number;
   name: string;
@@ -11,6 +16,7 @@ export interface Pool {
   phone: string | null;
   website: string | null;
   imageUrl?: string | null;
+  amenities?: AmenityItem[] | null;
 }
 
 export interface ScheduleResult {
@@ -39,6 +45,7 @@ export interface FacetCounts {
   swimTypes: Record<string, number>;
   daysOfWeek: Record<number, number>;
   poolTypes: Record<string, number>;
+  amenities: Record<string, number>;
 }
 
 export interface PoolSearchResponse {

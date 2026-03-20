@@ -168,6 +168,13 @@ export function useChatStream() {
                 break;
               case 'tool_call':
                 hadToolCall = true;
+                try {
+                  const toolInfo = JSON.parse(data);
+                  if (toolInfo.tool === 'fetch_webpage') {
+                    appendToAssistant(assistantId, '\n\n*Browsing the web...*\n\n');
+                    hasContent = true;
+                  }
+                } catch { /* ignore parse errors */ }
                 break;
               case 'tool_result':
                 break;
@@ -181,6 +188,7 @@ export function useChatStream() {
                   if (filters.time_from && filters.time_to) fs.setTimeRange(filters.time_from, filters.time_to);
                   if (filters.lat != null && filters.lng != null && filters.radius_km != null)
                     fs.setLocation({ lat: filters.lat, lng: filters.lng, radiusKm: filters.radius_km });
+                  if (filters.amenities) fs.setAmenities(filters.amenities);
                 } catch { /* ignore */ }
                 break;
               case 'pool_references':

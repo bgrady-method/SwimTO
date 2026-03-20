@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Anthropic.SDK" Version="5.10.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.12.2" />
     <PackageReference Include="dotenv.net" Version="4.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

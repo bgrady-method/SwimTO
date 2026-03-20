@@ -4,6 +4,7 @@ import type { LocationFilter, AttributeFilter } from '@/types/filters';
 interface FilterState {
   swimTypes: string[];
   daysOfWeek: number[];
+  amenities: string[];
   timeFrom: string;
   timeTo: string;
   location: LocationFilter | null;
@@ -14,6 +15,8 @@ interface FilterState {
   toggleSwimType: (type: string) => void;
   setDaysOfWeek: (days: number[]) => void;
   toggleDay: (day: number) => void;
+  setAmenities: (amenities: string[]) => void;
+  toggleAmenity: (amenity: string) => void;
   setTimeRange: (from: string, to: string) => void;
   setLocation: (location: LocationFilter | null) => void;
   setAttributes: (attrs: Partial<AttributeFilter>) => void;
@@ -25,6 +28,7 @@ interface FilterState {
 const initialState = {
   swimTypes: [] as string[],
   daysOfWeek: [] as number[],
+  amenities: [] as string[],
   timeFrom: '06:00',
   timeTo: '22:00',
   location: null as LocationFilter | null,
@@ -48,6 +52,13 @@ export const useFilterStore = create<FilterState>((set) => ({
       daysOfWeek: s.daysOfWeek.includes(day)
         ? s.daysOfWeek.filter((d) => d !== day)
         : [...s.daysOfWeek, day],
+    })),
+  setAmenities: (amenities) => set({ amenities }),
+  toggleAmenity: (amenity) =>
+    set((s) => ({
+      amenities: s.amenities.includes(amenity)
+        ? s.amenities.filter((a) => a !== amenity)
+        : [...s.amenities, amenity],
     })),
   setTimeRange: (from, to) => set({ timeFrom: from, timeTo: to }),
   setLocation: (location) => set({ location }),

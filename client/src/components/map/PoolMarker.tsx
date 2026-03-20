@@ -75,6 +75,23 @@ export function PoolMarker({ result }: PoolMarkerProps) {
             {result.poolType} · {formatDistance(result.distanceKm)}
             {result.laneCount && <> · {result.laneCount} lanes</>}
           </p>
+          {result.amenities && result.amenities.length > 0 && (
+            <div className="flex flex-wrap gap-1 mb-2">
+              {result.amenities.map((a) => (
+                <span
+                  key={a.name}
+                  className={
+                    a.verified
+                      ? 'text-[10px] px-1.5 py-0.5 rounded bg-teal-50 text-teal-700'
+                      : 'text-[10px] px-1.5 py-0.5 rounded bg-teal-50/50 text-teal-600 border border-dashed border-teal-300'
+                  }
+                >
+                  {!a.verified && <span className="mr-0.5 text-[10px]" title="Unverified">⚠</span>}
+                  {a.name}
+                </span>
+              ))}
+            </div>
+          )}
           {result.matchingSchedules.length > 0 && (
             <div className="space-y-0.5">
               <p className="text-xs font-medium mb-1">Next sessions:</p>

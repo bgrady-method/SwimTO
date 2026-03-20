@@ -14,6 +14,7 @@ public class Pool
     public string? Phone { get; set; }
     public string? Website { get; set; }
     public string? ImageUrl { get; set; }
+    public string? AmenitiesJson { get; set; } // JSON array: ["Water Slide", "Sauna", ...]
     public int? TorontoLocationId { get; set; }
     public bool IsActive { get; set; } = true;
 

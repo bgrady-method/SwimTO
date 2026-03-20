@@ -8,6 +8,7 @@ export interface AttributeFilter {
   poolType: string | null;
   minLength?: number | null;
   minLanes: number | null;
+  amenities?: string[];
 }
 
 export interface RankingWeights {

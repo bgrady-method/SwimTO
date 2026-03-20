@@ -87,6 +87,24 @@ export function ResultsCarousel({ pools }: ResultsCarouselProps) {
               )}
             </div>
 
+            {pool.amenities && pool.amenities.length > 0 && (
+              <div className="flex flex-wrap gap-1">
+                {pool.amenities.map((a) => (
+                  <span
+                    key={a.name}
+                    className={
+                      a.verified
+                        ? 'text-[10px] px-1 py-0.5 rounded bg-teal-50 text-teal-700 dark:bg-teal-950 dark:text-teal-300'
+                        : 'text-[10px] px-1 py-0.5 rounded bg-teal-50/50 text-teal-600 border border-dashed border-teal-300 dark:bg-teal-950/50 dark:text-teal-400 dark:border-teal-700'
+                    }
+                  >
+                    {!a.verified && <span className="mr-0.5">⚠</span>}
+                    {a.name}
+                  </span>
+                ))}
+              </div>
+            )}
+
             {pool.website && (
               <a
                 href={pool.website}
