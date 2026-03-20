@@ -6,7 +6,7 @@ export interface LocationFilter {
 
 export interface AttributeFilter {
   poolType: string | null;
-  minLength: number | null;
+  minLength?: number | null;
   minLanes: number | null;
 }
 
