@@ -2,7 +2,7 @@
 FROM node:22-alpine AS client-build
 WORKDIR /client
 COPY client/package.json client/package-lock.json ./
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 COPY client/ ./
 RUN npm run build
 
