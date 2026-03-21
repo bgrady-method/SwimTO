@@ -125,6 +125,52 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     await db.Database.EnsureCreatedAsync();
+
+    // Add columns/tables that were added after initial DB creation
+    // EnsureCreatedAsync() won't modify an existing database
+    var conn = db.Database.GetDbConnection();
+    await conn.OpenAsync();
+    using var cmd = conn.CreateCommand();
+
+    // Check and add missing columns to Pools table
+    cmd.CommandText = "PRAGMA table_info(Pools)";
+    var existingColumns = new HashSet<string>();
+    using (var reader = await cmd.ExecuteReaderAsync())
+    {
+        while (await reader.ReadAsync())
+            existingColumns.Add(reader.GetString(1));
+    }
+
+    string[] alterStatements = [];
+    if (!existingColumns.Contains("AmenitiesJson"))
+        alterStatements = [.. alterStatements, "ALTER TABLE Pools ADD COLUMN AmenitiesJson TEXT"];
+    if (!existingColumns.Contains("TorontoLocationId"))
+        alterStatements = [.. alterStatements, "ALTER TABLE Pools ADD COLUMN TorontoLocationId INTEGER"];
+    if (!existingColumns.Contains("ImageUrl"))
+        alterStatements = [.. alterStatements, "ALTER TABLE Pools ADD COLUMN ImageUrl TEXT"];
+
+    foreach (var sql in alterStatements)
+    {
+        cmd.CommandText = sql;
+        await cmd.ExecuteNonQueryAsync();
+        Log.Information("Applied schema migration: {Sql}", sql);
+    }
+
+    // Create KnowledgeEntries table if missing
+    cmd.CommandText = """
+        CREATE TABLE IF NOT EXISTS KnowledgeEntries (
+            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+            PoolId INTEGER,
+            Topic TEXT NOT NULL,
+            Fact TEXT NOT NULL,
+            SourceUrl TEXT,
+            Confidence REAL NOT NULL DEFAULT 0,
+            DiscoveredAt TEXT NOT NULL DEFAULT (datetime('now')),
+            VerifiedAt TEXT,
+            FOREIGN KEY (PoolId) REFERENCES Pools(Id) ON DELETE SET NULL
+        )
+        """;
+    await cmd.ExecuteNonQueryAsync();
 }
 
 app.Run();
