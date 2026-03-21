@@ -29,6 +29,8 @@ function toPoolSearchResult(ref: PoolReference): PoolSearchResult {
     isAccessible: false,
     phone: null,
     website: ref.website ?? null,
+    imageUrl: ref.imageUrl ?? null,
+    amenities: ref.amenities ?? null,
     distanceKm: ref.distanceKm ?? 0,
     compositeScore: 0.85,
     scores: { proximity: 0, poolLength: 0, laneCount: 0, scheduleConvenience: 0 },
@@ -37,9 +39,16 @@ function toPoolSearchResult(ref: PoolReference): PoolSearchResult {
 }
 
 export function MapPanel({ results, activeTab, highlightedPools }: MapPanelProps) {
+  // Always show full search results (with schedules/amenities).
+  // When on chat tab with highlighted pools, merge any chat-only pools
+  // that aren't already in results (e.g. if filters differ).
   const markersToShow = useMemo(() => {
     if (activeTab === 'chat' && highlightedPools.length > 0) {
-      return highlightedPools.map(toPoolSearchResult);
+      const resultIds = new Set(results.map((r) => r.poolId));
+      const extras = highlightedPools
+        .filter((p) => !resultIds.has(p.poolId))
+        .map(toPoolSearchResult);
+      return [...results, ...extras];
     }
     return results;
   }, [activeTab, highlightedPools, results]);

@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { useMapStore } from '@/stores/useMapStore';
 import type { LocationFilter, AttributeFilter } from '@/types/filters';
 
 interface FilterState {
@@ -67,5 +68,8 @@ export const useFilterStore = create<FilterState>((set) => ({
   setSearchQuery: (query) => set({ searchQuery: query }),
   toggleShowFavoritesOnly: () =>
     set((s) => ({ showFavoritesOnly: !s.showFavoritesOnly })),
-  resetFilters: () => set(initialState),
+  resetFilters: () => {
+    set(initialState);
+    useMapStore.getState().setHighlightedPools([]);
+  },
 }));
