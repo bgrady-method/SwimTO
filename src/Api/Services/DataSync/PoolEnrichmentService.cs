@@ -160,11 +160,10 @@ public class PoolEnrichmentService(
                 if (pool.AmenitiesJson != newJson)
                 {
                     pool.AmenitiesJson = newJson;
+                    await db.SaveChangesAsync(ct); // Save per-pool to avoid long write locks
                     updated++;
                 }
             }
-
-            await db.SaveChangesAsync(ct);
             logger.LogInformation("Amenity enrichment: {Updated}/{Total} pools updated with verified amenities from {Source} ArcGIS records",
                 updated, pools.Count, amenityMap.Count);
         }

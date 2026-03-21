@@ -132,6 +132,10 @@ using (var scope = app.Services.CreateScope())
     await conn.OpenAsync();
     using var cmd = conn.CreateCommand();
 
+    // Enable WAL mode for concurrent reads during background writes
+    cmd.CommandText = "PRAGMA journal_mode=WAL";
+    await cmd.ExecuteNonQueryAsync();
+
     // Check and add missing columns to Pools table
     cmd.CommandText = "PRAGMA table_info(Pools)";
     var existingColumns = new HashSet<string>();
