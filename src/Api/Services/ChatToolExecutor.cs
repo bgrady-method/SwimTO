@@ -97,7 +97,7 @@ public class ChatToolExecutor(
             pool.Phone,
             pool.Website,
             pool.ImageUrl,
-            Amenities = pool.AmenitiesJson != null ? JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson) : null,
+            Amenities = AmenityItem.DeserializeJson(pool.AmenitiesJson),
             Schedules = schedules.Select(s => new
             {
                 s.SwimType,
@@ -263,9 +263,7 @@ public class ChatToolExecutor(
         var pool = await db.Pools.FindAsync(poolId);
         if (pool is null) return JsonSerializer.Serialize(new { error = "Pool not found" });
 
-        var amenities = pool.AmenitiesJson != null
-            ? JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson)
-            : null;
+        var amenities = AmenityItem.DeserializeJson(pool.AmenitiesJson);
 
         return JsonSerializer.Serialize(new
         {

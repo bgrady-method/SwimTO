@@ -83,7 +83,7 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
                 Phone = pool.Phone,
                 Website = pool.Website,
                 ImageUrl = pool.ImageUrl,
-                Amenities = pool.AmenitiesJson != null ? JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson) : null,
+                Amenities = AmenityItem.DeserializeJson(pool.AmenitiesJson),
                 DistanceKm = Math.Round(distance, 2),
                 CompositeScore = Math.Round(compositeScore, 4),
                 Scores = scores,
@@ -220,7 +220,7 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
         // Amenity facets: count pools that have each amenity, respecting all filters EXCEPT amenities
         var allAmenities = poolsWithDistance
             .Where(p => p.Pool.AmenitiesJson != null)
-            .SelectMany(p => (JsonSerializer.Deserialize<AmenityItem[]>(p.Pool.AmenitiesJson!) ?? []).Select(a => a.Name))
+            .SelectMany(p => AmenityItem.DeserializeNames(p.Pool.AmenitiesJson))
             .Distinct();
 
         foreach (var amenity in allAmenities)
@@ -252,17 +252,14 @@ public class PoolSearchService(AppDbContext db, PoolRankingService rankingServic
 
     private static bool PoolHasAllAmenities(Models.Pool pool, string[] requiredAmenities)
     {
-        if (pool.AmenitiesJson is null) return false;
-        var poolAmenities = JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson);
-        if (poolAmenities is null) return false;
-        var names = poolAmenities.Select(a => a.Name).ToArray();
+        var names = AmenityItem.DeserializeNames(pool.AmenitiesJson);
+        if (names.Length == 0) return false;
         return requiredAmenities.All(a => names.Contains(a, StringComparer.OrdinalIgnoreCase));
     }
 
     private static bool PoolHasAmenity(Models.Pool pool, string amenity)
     {
-        if (pool.AmenitiesJson is null) return false;
-        var poolAmenities = JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson);
-        return poolAmenities?.Any(a => string.Equals(a.Name, amenity, StringComparison.OrdinalIgnoreCase)) ?? false;
+        var names = AmenityItem.DeserializeNames(pool.AmenitiesJson);
+        return names.Any(n => string.Equals(n, amenity, StringComparison.OrdinalIgnoreCase));
     }
 }

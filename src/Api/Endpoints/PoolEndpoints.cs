@@ -40,7 +40,7 @@ public static class PoolEndpoints
                 pool.Phone,
                 pool.Website,
                 pool.ImageUrl,
-                Amenities = pool.AmenitiesJson != null ? JsonSerializer.Deserialize<AmenityItem[]>(pool.AmenitiesJson) : null,
+                Amenities = AmenityItem.DeserializeJson(pool.AmenitiesJson),
             });
         });
 
